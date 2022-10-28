@@ -28,7 +28,7 @@ const Game = {
             this.backgroundImg.src = "../Img/Mapa.png"
             this.ctx.drawImage(this.backgroundImg, 0, 0, this.width, this.height)
 
-            console.log('HOOLIIIIIIWIIIIII')
+            
         }, 1000 / this.FPS);
 
     }
