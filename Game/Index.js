@@ -1,0 +1,6 @@
+onload = () => Game.init()
+
+
+
+
+
