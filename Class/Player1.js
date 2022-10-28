@@ -64,6 +64,14 @@ class Player1 {
                     this.Down=false
                     this.Up=true
                     break;
+
+                case "Space":
+                  
+                    this.left=false                    
+                    this.Right=false
+                    this.Down=false
+                    this.Up=false
+                    break;
             
                 default:
                     break;
@@ -73,7 +81,7 @@ class Player1 {
     }
     move(){
         
-        if (this.left===true) {this.posX -=2}
+        if (this.left===true) {this.posX -=2;}
         if (this.Right===true) {this.posX +=2}
         if (this.Down===true) {this.posY +=2}
         if (this.Up===true) {this.posY -=2}

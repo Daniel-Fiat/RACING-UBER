@@ -7,8 +7,8 @@ class Player2 {
         this.width= 30 
         this.height = 50
 
-        this.posx=500 
-        this.posY=900  
+        this.posx=900
+        this.posY=500  
         
 
         this.left=false
@@ -35,12 +35,12 @@ class Player2 {
     
     EventListeners(){
         document.addEventListener('keydown', (e)=>{
+            console.log(e.code)
         switch (e.code) {
                 case "ArrowLeft":
                     this.width = 70
                     this.height= 30
                     this.playerImg.src='../Img/carIzq.png'
-                    this.posx -=10
                     this.left=true                    
                     this.Right=false
                     this.Down=false
@@ -51,7 +51,6 @@ class Player2 {
                     this.width = 70
                     this.height= 30
                     this.playerImg.src='../Img/carDerecha.png'
-                    this.posx +=10
                     this.left=false                    
                     this.Right=true
                     this.Down=false
@@ -63,8 +62,7 @@ class Player2 {
                     this.width = 30
                     this.height= 50
                     this.playerImg.src='../Img/carAbajo.png'
-                    this.posY +=10
-                     this.left=false                    
+                    this.left=false                    
                     this.Right=false
                     this.Down=true
                     this.Up=false
@@ -75,11 +73,16 @@ class Player2 {
                     this.width = 30
                     this.height= 50
                     this.playerImg.src='../Img/car.png'
-                    this.posY -=10
                     this.left=false                    
                     this.Right=false
                     this.Down=false
                     this.Up=true
+                    break;
+                case "Numpad0":
+                    this.left=false                    
+                    this.Right=false
+                    this.Down=false
+                    this.Up=false
                     break;
             
                 default:
