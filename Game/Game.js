@@ -29,6 +29,7 @@ const Game = {
             this.ctx.drawImage(this.backgroundImg, 0, 0, this.width, this.height)
 
             console.log('HOOLIIIIIIWIIIIII')
+            console.log('holaaaaaaaaaaaaaaaaaaaaaaaaaa')
         }, 1000 / this.FPS);
 
     }
