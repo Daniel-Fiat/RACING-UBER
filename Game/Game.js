@@ -30,6 +30,7 @@ const Game = {
         this.intervalID = setInterval(() => {           
             
             this.drawAll()
+            
 
             
         }, 1000 / this.FPS);
