@@ -1,11 +1,8 @@
 class Player2 {
- constructor(ctx, ctxWidth, ctxHeight, carColor)
-  {
+ constructor(ctx, ctxWidth, ctxHeight) {
         this.ctx = ctx
         this.ctxWidth = ctxWidth
         this.ctxHeight = ctxHeight
-        this.carColor = carColor
-
         
         this.width= 30 
         this.height = 50
@@ -38,13 +35,12 @@ class Player2 {
     
     EventListeners(){
         document.addEventListener('keydown', (e)=>{
-    
+            
         switch (e.code) {
                 case "ArrowLeft":
                     this.width = 50
                     this.height= 30
-                    this.playerImg.src = this.carColor.left
-                    
+                    this.playerImg.src='../Img/carIzq.png'
                     this.left=true                    
                     this.Right=false
                     this.Down=false
@@ -54,7 +50,7 @@ class Player2 {
 
                     this.width = 50
                     this.height= 30
-                    this.playerImg.src=this.carColor.rigth
+                    this.playerImg.src='../Img/carDerecha.png'
                     this.left=false                    
                     this.Right=true
                     this.Down=false
@@ -65,7 +61,7 @@ class Player2 {
 
                     this.width = 30
                     this.height= 50
-                    this.playerImg.src=this.carColor.down
+                    this.playerImg.src='../Img/carAbajo.png'
                     this.left=false                    
                     this.Right=false
                     this.Down=true
@@ -76,7 +72,7 @@ class Player2 {
 
                     this.width = 30
                     this.height= 50
-                    this.playerImg.src=this.carColor.up
+                    this.playerImg.src='../Img/car.png'
                     this.left=false                    
                     this.Right=false
                     this.Down=false

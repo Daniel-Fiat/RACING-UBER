@@ -9,8 +9,7 @@ const Game = {
     background: undefined,
     player1: undefined,
     player2: undefined,
-    Player1Color: "blue",
-    Car1Color: undefined,
+    
     
 
 
@@ -43,7 +42,7 @@ const Game = {
     generateAll(){
         this.background= new background (this.ctx, this.width, this.height)
         this.player1= new Player1 (this.ctx, this.width, this.height)
-        this.player2= new Player2 (this.ctx, this.width, this.height,this.Car1Color)
+        this.player2= new Player2 (this.ctx, this.width, this.height)
         
 
 
@@ -57,14 +56,6 @@ const Game = {
 
     },
     selectColorCar(){
-        switch ("blue") {
-            case "blue":
-                this.Car1Color = carBlue
-                break;
-        
-            default:
-                break;
-        }
 
     }
 
