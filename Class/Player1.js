@@ -1,8 +1,9 @@
 class Player1 {
- constructor(ctx, ctxWidth, ctxHeight,) {
+ constructor(ctx, ctxWidth, ctxHeight,carColor) {
         this.ctx = ctx
         this.ctxWidth = ctxWidth
         this.ctxHeight = ctxHeight
+       this.carColor = carColor
         
         this.width= 30
         this.height = 50
@@ -11,7 +12,7 @@ class Player1 {
         this.posY=500
 
         this.playerImg = new Image()
-        this.playerImg.src='../Img/car.png'
+        this.playerImg.src= carColor.up
         
         this.EventListeners()
     }
@@ -27,7 +28,7 @@ class Player1 {
                 case "KeyA":
                     this.width = 50
                     this.height= 30
-                    this.playerImg.src='../Img/carIzq.png'                   
+                    this.playerImg.src = this.carColor.left
                     this.left=true                    
                     this.Right=false
                     this.Down=false
@@ -37,7 +38,7 @@ class Player1 {
 
                     this.width = 50
                     this.height= 30
-                    this.playerImg.src='../Img/carDerecha.png'               
+                    this.playerImg.src=this.carColor.right
                     this.left=false                    
                     this.Right=true
                     this.Down=false
@@ -48,7 +49,7 @@ class Player1 {
 
                     this.width = 30
                     this.height= 50
-                    this.playerImg.src='../Img/carAbajo.png'                    
+                    this.playerImg.src=this.carColor.down
                     this.left=false                    
                     this.Right=false
                     this.Down=true
@@ -59,7 +60,7 @@ class Player1 {
 
                     this.width = 30
                     this.height= 50
-                    this.playerImg.src='../Img/car.png'                  
+                    this.playerImg.src=this.carColor.up
                     this.left=false                    
                     this.Right=false
                     this.Down=false

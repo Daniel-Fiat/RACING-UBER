@@ -12,17 +12,7 @@ class Player2 {
 
         this.posX=900
         this.posY=500  
-        
-
-        this.left=false
-        this.Right=false
-        this.Down=false
-        this.Up=false
-
-
-        this.velx = 0
-        this.vely = 0
-
+    
         this.playerImg = new Image()
         this.playerImg.src= carColor.up
 
