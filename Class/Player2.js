@@ -10,8 +10,8 @@ class Player2 {
         this.width= 30 
         this.height = 50
 
-        this.posX=900
-        this.posY=500  
+        this.posX=0
+        this.posY=0  
     
         this.playerImg = new Image()
         this.playerImg.src= carColor.up
