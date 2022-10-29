@@ -11,10 +11,12 @@ const Game = {
     player2: undefined,
 
     Player1Color:"red",
-    Player2Color: "red",
+    Player2Color: "blue",
 
     Car1Color: undefined,
     Car2Color:undefined,
+
+    block:undefined,
     
 
 
@@ -35,9 +37,9 @@ const Game = {
         this.generateAll()
        
         this.intervalID = setInterval(() => {           
-            this.ctx.clearRect(0, 0, this.width, this.height)
-            this.drawAll()
             
+            this.drawAll()
+            this.checkCollision()
 
             
         }, 1000 / this.FPS);
@@ -49,7 +51,7 @@ const Game = {
         this.background= new background (this.ctx, this.width, this.height)
         this.player1= new Player1 (this.ctx, this.width, this.height,this.Car1Color)
         this.player2= new Player2 (this.ctx, this.width, this.height,this.Car2Color)
-        
+        this.block= new Block(this.ctx,this.width,this.height,60,70,50,50)
 
 
     },
@@ -58,9 +60,11 @@ const Game = {
         this.background.draw()
         this.player1.draw()
         this.player2.draw()
+        this.block.draw()
         
 
     },
+
     setColorCar(){
 
         switch (this.Player1Color) {
@@ -86,10 +90,15 @@ const Game = {
             default:
                 break;
         }
+        
 
+    },
+    checkCollision(){
+        if(this.player1.posX < this.block.posXMax+100){this.player1.stop()}
     }
 
 }
+
     const carBlue = {
         left:'../Img/blue-left.png',
         right:'../Img/blue-right.png',

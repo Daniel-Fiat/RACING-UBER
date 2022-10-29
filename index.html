@@ -9,7 +9,31 @@
     
 </head>
 <body>
-    
+    <main class="main">
+      <img src="--logoImg--" alt="logo">
+      <h1>WELCOME TO RACING UBER!!</h1>
+      <form action="--" method="get">
+        <fieldset>
+            <legend>Player's Names:</legend>
+                <label for="player1">Player One:</label><br>
+                <input type="text" id="player1" name="player1" ><br>
+                <label for="player2">Player Two:</label><br>
+                <input type="text" id="player2" name="player2" ><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Car's Colors:</legend>
+                <label for="cars">Choose a color:</label>
+                    <select id="cars">
+                        <option value="blue">Blue</option>
+                        <option value="red">Red</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+        </fieldset>
+        <input type="submit" value="Submit">
+      </form>
+    <button class="startGame" type="button">Start</button>
+    </main>
 
 
     
@@ -17,6 +41,7 @@
 
 
     
+    <script src = "./Class/block.js"></script>
     <script src = "./Class/Player2.js"></script>
     <script src = "./Class/Player1.js"></script>
     <script src = "./Class/Background.js"></script>
