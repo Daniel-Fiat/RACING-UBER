@@ -15,6 +15,7 @@ class Block {
     }
     
     draw(){
-        this.ctx.clearRect(this.posY, this.posX, this.posYMax, this.posXMax)
+        this.ctx.clearRect(this.posX,this.posY,this.whidth,this.height)
+        
     }
 }

@@ -51,7 +51,7 @@ const Game = {
         this.background= new background (this.ctx, this.width, this.height)
         this.player1= new Player1 (this.ctx, this.width, this.height,this.Car1Color)
         this.player2= new Player2 (this.ctx, this.width, this.height,this.Car2Color)
-        this.block= new Block(this.ctx,this.width,this.height,60,70,50,50)
+        this.block= new Block(this.ctx,this.width,this.height,75,50,230,180)
 
 
     },
@@ -94,7 +94,11 @@ const Game = {
 
     },
     checkCollision(){
-        if(this.player1.posX < this.block.posXMax+100){this.player1.stop()}
+        if(this.player1.posX < this.block.posXMax &&
+            this.player1.posY < this.block.posYMax&&
+            this.player1.posY > this.block.posY - this.player1.height &&
+            this.player1.posX > this.block.posX - this.player1.width )
+            {this.player1.stop()}
     }
 
 }
