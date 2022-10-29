@@ -38,7 +38,7 @@ const Game = {
     block20:undefined,
     block21:undefined,
     block22:undefined,
-    blockArray:[],
+    mapArray:[],
     
 
 
@@ -74,7 +74,7 @@ const Game = {
         this.player1= new Player1 (this.ctx, this.width, this.height,this.Car1Color)
         this.player2= new Player2 (this.ctx, this.width, this.height,this.Car2Color)
         
-        this.blockArray.push(
+        this.mapArray.push(
         this.block= new Block(this.ctx,this.width,this.height,55,50,185,186),
         this.block2= new Block(this.ctx,this.width,this.height,55,285,185,186),
         this.block3= new Block(this.ctx,this.width,this.height,55,520,185,363),
@@ -106,7 +106,7 @@ const Game = {
         this.background.draw()
         this.player1.draw()
         this.player2.draw()
-        this.blockArray.forEach(block => {
+        this.mapArray.forEach(block => {
             block.draw()
         });
          this.checkCollision()
@@ -145,7 +145,7 @@ const Game = {
 
     },
     checkCollision(){
-        this.blockArray.forEach(block => {
+        this.mapArray.forEach(block => {
             if(this.player1.posX < block.posXMax &&
                 this.player1.posY < block.posYMax&&
                 this.player1.posY > block.posY - this.player1.height &&
