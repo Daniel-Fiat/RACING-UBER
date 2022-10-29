@@ -7,7 +7,7 @@ class Player2 {
         this.width= 30 
         this.height = 50
 
-        this.posx=900
+        this.posX=900
         this.posY=500  
         
 
@@ -29,16 +29,16 @@ class Player2 {
     }
     
     draw(){
-        this.ctx.drawImage(this.playerImg, this.posx, this.posY, this.width, this.height)
+        this.ctx.drawImage(this.playerImg, this.posX, this.posY, this.width, this.height)
         this.move()
     }
     
     EventListeners(){
         document.addEventListener('keydown', (e)=>{
-            console.log(e.code)
+            
         switch (e.code) {
                 case "ArrowLeft":
-                    this.width = 70
+                    this.width = 50
                     this.height= 30
                     this.playerImg.src='../Img/carIzq.png'
                     this.left=true                    
@@ -48,7 +48,7 @@ class Player2 {
                     break;
                 case "ArrowRight":
 
-                    this.width = 70
+                    this.width = 50
                     this.height= 30
                     this.playerImg.src='../Img/carDerecha.png'
                     this.left=false                    
@@ -92,10 +92,10 @@ class Player2 {
             })
         }
         move(){
-            if (this.left===true) {this.posx -=2}
-            if (this.Right===true) {this.posx +=2}
-            if (this.Down===true) {this.posY +=2}
-            if (this.Up===true) {this.posY -=2}
+            if(this.posX-10 > 0 ){if (this.left===true) {this.posX -=4;} }
+            if (this.posX+70 < this.ctxWidth){if (this.Right===true) {this.posX +=4} }
+            if(this.posY > 0){ if (this.Up===true) {this.posY -=4}}
+            if(this.posY < 900) {if (this.Down===true) {this.posY +=4}}
             
         }
     }

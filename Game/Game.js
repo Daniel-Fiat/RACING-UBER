@@ -28,7 +28,7 @@ const Game = {
         this.generateAll()
        
         this.intervalID = setInterval(() => {           
-            
+             this.ctx.clearRect(0, 0, this.width, this.height)
             this.drawAll()
             
 
