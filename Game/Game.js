@@ -1,3 +1,17 @@
+const carBlue = {
+    left:'../Img/carIzq.png',
+    right:'../Img/carDerecha.png',
+    down:'../Img/carAbajo.png',
+    up :'../Img/car.png',
+
+}
+const carRed = {
+    left:'../Img/red-left.png',
+    right:'../Img/red-der.png',
+    down:'../Img/red-down.png',
+    up :'../Img/red-Up.png',
+
+}
 const Game = {
 
     FPS: 60,
@@ -9,7 +23,8 @@ const Game = {
     background: undefined,
     player1: undefined,
     player2: undefined,
-    
+    Player1Color: "red",
+    Car1Color: undefined,
     
 
 
@@ -40,9 +55,10 @@ const Game = {
     },
 
     generateAll(){
+        this.selectColorCar()
         this.background= new background (this.ctx, this.width, this.height)
         this.player1= new Player1 (this.ctx, this.width, this.height)
-        this.player2= new Player2 (this.ctx, this.width, this.height)
+        this.player2= new Player2 (this.ctx, this.width, this.height,this.Car1Color)
         
 
 
@@ -56,8 +72,20 @@ const Game = {
 
     },
     selectColorCar(){
+        switch (this.Player1Color) {
+            case "blue":
+                this.Car1Color = carBlue
+                break;
+            case "red":
+                this.Car1Color = carRed
+                break;
+        
+            default:
+                break;
+        }
 
     }
+    
 
 
 
