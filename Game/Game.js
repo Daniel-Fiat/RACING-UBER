@@ -46,8 +46,8 @@ const Game = {
         this.canvas = document.querySelector(".canvas")
         this.ctx = this.canvas.getContext("2d")
 
-        this.width = window.innerWidth/1.0005
-        this.height = window.innerHeight/1.004
+        this.width = 1478
+        this.height = 933
 
         this.canvas.width = this.width
         this.canvas.height = this.height
