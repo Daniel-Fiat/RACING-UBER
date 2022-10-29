@@ -19,7 +19,7 @@ class Player1 {
        this.ctx.drawImage(this.playerImg, this.posX, this.posY, this.width, this.height)
        this.move()
       
-       console.log(this.posY)
+     
 }
    EventListeners(){
         document.addEventListener('keydown', (e)=>{

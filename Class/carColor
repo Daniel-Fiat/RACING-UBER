@@ -1,0 +1,7 @@
+const carBlue = {
+    left:'../Img/carIzq.png',
+    right:'../Img/carDerecha.png',
+    down:'../Img/carAbajo.png',
+    up :'../Img/car.png',
+
+}
