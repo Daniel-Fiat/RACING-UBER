@@ -1,19 +1,5 @@
-const carBlue = {
-    left:'../Img/carIzq.png',
-    right:'../Img/carDerecha.png',
-    down:'../Img/carAbajo.png',
-    up :'../Img/car.png',
-
-}
-const carRed = {
-    left:'../Img/red-left.png',
-    right:'../Img/red-der.png',
-    down:'../Img/red-down.png',
-    up :'../Img/red-Up.png',
-
-}
 const Game = {
-
+    
     FPS: 60,
     canvas: undefined,
     ctx: undefined,
@@ -23,7 +9,7 @@ const Game = {
     background: undefined,
     player1: undefined,
     player2: undefined,
-    Player1Color: "red",
+    Player1Color: "blue",
     Car1Color: undefined,
     
 
@@ -85,9 +71,19 @@ const Game = {
         }
 
     }
-    
-
-
-
 
 }
+    const carBlue = {
+        left:'../Img/carIzq.png',
+        right:'../Img/carDerecha.png',
+        down:'../Img/carAbajo.png',
+        up :'../Img/car.png',
+    
+    }
+    const carRed = {
+        left:'../Img/red-left.png',
+        right:'../Img/red-der.png',
+        down:'../Img/red-down.png',
+        up :'../Img/red-Up.png',
+    
+    }
