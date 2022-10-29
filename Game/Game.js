@@ -10,7 +10,7 @@ const Game = {
     player1: undefined,
     player2: undefined,
 
-    Player1Color:"blue",
+    Player1Color:"red",
     Player2Color: "red",
 
     Car1Color: undefined,
