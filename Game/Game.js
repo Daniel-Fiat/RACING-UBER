@@ -9,6 +9,7 @@ const Game = {
     background: undefined,
     player1: undefined,
     player2: undefined,
+    player3:undefined,
 
 
     init() {
@@ -28,7 +29,7 @@ const Game = {
         this.generateAll()
        
         this.intervalID = setInterval(() => {           
-             this.ctx.clearRect(0, 0, this.width, this.height)
+            this.ctx.clearRect(0, 0, this.width, this.height)
             this.drawAll()
             
 
@@ -41,6 +42,7 @@ const Game = {
         this.background= new background (this.ctx, this.width, this.height)
         this.player1= new Player1 (this.ctx, this.width, this.height)
         this.player2= new Player2 (this.ctx, this.width, this.height)
+        this.player3= new Player3 (this.ctx, this.width, this.height)
 
 
     },
@@ -49,6 +51,7 @@ const Game = {
         this.background.draw()
         this.player1.draw()
         this.player2.draw()
+        this.player3.draw()
 
     }
 

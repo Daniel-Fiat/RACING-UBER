@@ -4,13 +4,13 @@ class background {
         this.width = width
         this.height= height
 
-        //this.backgroundImg= new Image()
-        //this.backgroundImg.src= "../Img/Mapa.png"
+        this.backgroundImg= new Image()
+        this.backgroundImg.src= "../Img/Mapa.png"
          
     }
     draw(){
-       //this.ctx.drawImage(this.backgroundImg, 0, 0, this.width, this.height)
-       this.ctx.fillRect(500,200,500,500)
+       this.ctx.drawImage(this.backgroundImg, 0, 0, this.width, this.height)
+       this.ctx.fillRect(660,230,50,50)
     }
 
 }

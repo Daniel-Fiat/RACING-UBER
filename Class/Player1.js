@@ -1,5 +1,5 @@
 class Player1 {
- constructor(ctx, ctxWidth, ctxHeight) {
+ constructor(ctx, ctxWidth, ctxHeight,) {
         this.ctx = ctx
         this.ctxWidth = ctxWidth
         this.ctxHeight = ctxHeight
@@ -7,8 +7,8 @@ class Player1 {
         this.width= 30
         this.height = 50
 
-        this.posX=20
-        this.posY=800
+        this.posX=600
+        this.posY=500
 
         this.playerImg = new Image()
         this.playerImg.src='../Img/car.png'
