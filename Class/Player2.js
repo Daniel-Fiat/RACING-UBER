@@ -72,10 +72,7 @@ class Player2 {
                     this.Up=true
                     break;
                 case "Numpad0":
-                    this.left=false                    
-                    this.Right=false
-                    this.Down=false
-                    this.Up=false
+                    this.stop()
                     break;
             
                 default:
@@ -90,5 +87,11 @@ class Player2 {
             if(this.posY > 0){ if (this.Up===true) {this.posY -=4}}
             if(this.posY < 900) {if (this.Down===true) {this.posY +=4}}
             
+        }
+        stop(){
+            this.left=false                    
+            this.Right=false
+            this.Down=false
+            this.Up=false
         }
     }

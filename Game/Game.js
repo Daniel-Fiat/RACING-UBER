@@ -99,6 +99,11 @@ const Game = {
             this.player1.posY > this.block.posY - this.player1.height &&
             this.player1.posX > this.block.posX - this.player1.width )
             {this.player1.stop()}
+        if(this.player2.posX < this.block.posXMax &&
+            this.player2.posY < this.block.posYMax&&
+            this.player2.posY > this.block.posY - this.player2.height &&
+            this.player2.posX > this.block.posX - this.player2.width )
+            {this.player2.stop()}
     }
 
 }

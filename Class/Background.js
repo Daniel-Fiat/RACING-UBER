@@ -10,7 +10,7 @@ class background {
     }
     draw(){
        this.ctx.drawImage(this.backgroundImg, 0, 0, this.width, this.height)
-       this.ctx.fillRect(660,230,50,50)
+      
     }
 
 }
