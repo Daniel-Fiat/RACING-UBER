@@ -75,13 +75,13 @@ const Game = {
         this.player2= new Player2 (this.ctx, this.width, this.height,this.Car2Color)
         
         this.mapArray.push(
-        this.block= new Block(this.ctx,this.width,this.height,55,50,185,186),
-        this.block2= new Block(this.ctx,this.width,this.height,55,285,185,186),
-        this.block3= new Block(this.ctx,this.width,this.height,55,520,185,363),
-        this.block4= new Block(this.ctx,this.width,this.height,287,0,130,177),
-        this.block5= new Block(this.ctx,this.width,this.height,287,225,185,365),
-        this.block6= new Block(this.ctx,this.width,this.height,287,637,185,245),
-        this.block7= new Block(this.ctx,this.width,this.height,462,0,185,177),
+        this.block= new Block(this.ctx,this.width,this.height,60,55,170,171),
+        this.block2= new Block(this.ctx,this.width,this.height,60,290,175,171),
+        this.block3= new Block(this.ctx,this.width,this.height,60,525,175,353),
+        this.block4= new Block(this.ctx,this.width,this.height,294,0,115,171),
+        this.block5= new Block(this.ctx,this.width,this.height,292,230,175,355),
+        this.block6= new Block(this.ctx,this.width,this.height,293,642,175,235),
+        this.block7= new Block(this.ctx,this.width,this.height,467,0,185,177),
         this.block8= new Block(this.ctx,this.width,this.height,520,225,185,423),
         this.block9= new Block(this.ctx,this.width,this.height,520,695,185,187),
         this.block10= new Block(this.ctx,this.width,this.height,695,0,243,176),

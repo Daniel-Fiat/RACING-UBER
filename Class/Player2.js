@@ -7,8 +7,8 @@ class Player2 {
         this.carColor = carColor
 
         
-        this.width= 30 
-        this.height = 50
+        this.width= 25
+        this.height = 40
 
         this.posX=0
         this.posY=0  
@@ -31,40 +31,43 @@ class Player2 {
             
         switch (e.code) {
                 case "ArrowLeft":
-                    this.width = 50
-                    this.height= 30
+                    this.width = 40
+                    this.height= 25
                     this.playerImg.src = this.carColor.left
                     this.left=true                    
                     this.Right=false
                     this.Down=false
                     this.Up=false
+                   
                     break;
                 case "ArrowRight":
 
-                    this.width = 50
-                    this.height= 30
+                    this.width = 40
+                    this.height= 25
                     this.playerImg.src=this.carColor.right
                     this.left=false                    
                     this.Right=true
                     this.Down=false
                     this.Up=false
+                   
 
                     break;
                 case "ArrowDown":
 
-                    this.width = 30
-                    this.height= 50
+                    this.width = 25
+                    this.height= 40
                     this.playerImg.src=this.carColor.down
                     this.left=false                    
                     this.Right=false
                     this.Down=true
                     this.Up=false
+                    
 
                     break;
                 case "ArrowUp":
 
-                    this.width = 30
-                    this.height= 50
+                    this.width = 25
+                    this.height= 40
                     this.playerImg.src=this.carColor.up
                     this.left=false                    
                     this.Right=false
