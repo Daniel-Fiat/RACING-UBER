@@ -1,5 +1,5 @@
 class Block {
-    constructor(ctx, ctxWidth, ctxHeight,posX,posY,whidth,height){
+    constructor(ctx, ctxWidth, ctxHeight,posX,posY,width,height){
 
         this.ctx = ctx
         this.ctxWidth = ctxWidth
@@ -7,15 +7,15 @@ class Block {
         
         this.posX= posX
         this.posY= posY
-        this.whidth=whidth
+        this.width=width
         this.height=height
         this.posYMax= (this.posY + this.height)
-        this.posXMax= (this.posX + this.whidth)
+        this.posXMax= (this.posX + this.width)
        
     }
     
     draw(){
-        this.ctx.clearRect(this.posX,this.posY,this.whidth,this.height)
+        this.ctx.clearRect(this.posX,this.posY,this.width,this.height)
         
     }
 }

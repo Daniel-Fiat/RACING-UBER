@@ -40,6 +40,7 @@ const Game = {
             
             this.drawAll()
             this.checkCollision()
+            
            
 
             
@@ -54,7 +55,7 @@ const Game = {
         this.player2= new Player2 (this.ctx, this.width, this.height,this.Car2Color)
         this.map= new Map (this.ctx, this.width, this.height)
         this.map.setMap(map)
-        console.log(this.map)
+        
         
 
 
@@ -62,12 +63,15 @@ const Game = {
     },
 
     drawAll(){
-        this.background.draw()
-        this.player1.draw()
-        this.player2.draw()
         this.map.arrayMap.forEach(block => {
             block.draw()
         });
+        this.background.draw()
+        this.player2.draw()
+        this.player1.draw()
+        
+        
+        
         
         
         
@@ -103,17 +107,30 @@ const Game = {
 
     },
     checkCollision(){
+            
         this.map.arrayMap.forEach(block => {
             if(this.player1.posX < block.posXMax &&
                 this.player1.posY < block.posYMax&&
                 this.player1.posY > block.posY - this.player1.height &&
                 this.player1.posX > block.posX - this.player1.width )
                 {this.player1.stop()}
+                
             if(this.player2.posX < block.posXMax &&
                 this.player2.posY < block.posYMax&&
                 this.player2.posY > block.posY - this.player2.height &&
                 this.player2.posX > block.posX - this.player2.width )
                 {this.player2.stop()}
+                
+            if( this.player2.posX < this.player1.posXMax &&
+                this.player2.posY < this.player1.posYMax &&
+                this.player2.posY > this.player1.posY - this.player2.height   &&
+                this.player2.posX > this.player1.posX - this.player2.width)
+                {
+                    this.player2.stop()
+                    this.player1.stop()
+                }
+        
+            
         });
       
     }
