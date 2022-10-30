@@ -80,10 +80,10 @@ class Player1 {
     }
     move(){
         
-        if(this.posX-10 > 0 ){if (this.left===true) {this.posX -=4.5;} }
-        if (this.posX+70 < this.ctxWidth){if (this.Right===true) {this.posX +=4.5} }
-        if(this.posY > 0){ if (this.Up===true) {this.posY -=4.5}}
-        if(this.posY < 900) {if (this.Down===true) {this.posY +=4.5}}
+        if(this.posX-10 > 0 ){if (this.left===true) {this.posX -=3;} }
+        if (this.posX+70 < this.ctxWidth){if (this.Right===true) {this.posX +=3} }
+        if(this.posY > 0){ if (this.Up===true) {this.posY -=3}}
+        if(this.posY < 900) {if (this.Down===true) {this.posY +=3}}
        
     }
     stop(){

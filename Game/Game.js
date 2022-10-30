@@ -51,16 +51,17 @@ const Game = {
 
         this.canvas.width = this.width
         this.canvas.height = this.height
-
+        
         this.start()
     },
-
+    
     start() {        
         this.generateAll()
-       
+        
         this.intervalID = setInterval(() => {           
             
             this.drawAll()
+            this.checkCollision()
            
 
             
@@ -109,7 +110,6 @@ const Game = {
         this.mapArray.forEach(block => {
             block.draw()
         });
-         this.checkCollision()
         
         
         
