@@ -92,4 +92,6 @@ class Player1 {
         this.Down=false
         this.Up=false
     }
+    /// Set color
+    ///Set keys 
 } 

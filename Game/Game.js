@@ -20,7 +20,7 @@ const Game = {
     
 
 
-    init() {
+    init(map) {
         this.canvas = document.querySelector(".canvas")
         this.ctx = this.canvas.getContext("2d")
 
@@ -30,11 +30,11 @@ const Game = {
         this.canvas.width = this.width
         this.canvas.height = this.height
         
-        this.start()
+        this.start(map)
     },
     
-    start() {        
-        this.generateAll()
+    start(map) {        
+        this.generateAll(map)
         
         this.intervalID = setInterval(() => {           
             
@@ -47,13 +47,13 @@ const Game = {
 
     },
 
-    generateAll(){
+    generateAll(map){
         this.setColorCar()
         this.background= new background (this.ctx, this.width, this.height)
         this.player1= new Player1 (this.ctx, this.width, this.height,this.Car1Color)
         this.player2= new Player2 (this.ctx, this.width, this.height,this.Car2Color)
         this.map= new Map (this.ctx, this.width, this.height)
-        this.map.setMap(1)
+        this.map.setMap(map)
         console.log(this.map)
         
 
