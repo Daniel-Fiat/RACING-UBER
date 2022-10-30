@@ -15,30 +15,8 @@ const Game = {
 
     Car1Color: undefined,
     Car2Color:undefined,
-
-    block:undefined,
-    block2:undefined,
-    block3:undefined,
-    block4:undefined,
-    block5:undefined,
-    block6:undefined,
-    block7:undefined,
-    block8:undefined,
-    block9:undefined,
-    block10:undefined,
-    block11:undefined,
-    block12:undefined,
-    block13:undefined,
-    block14:undefined,
-    block15:undefined,
-    block16:undefined,
-    block17:undefined,
-    block18:undefined,
-    block19:undefined,
-    block20:undefined,
-    block21:undefined,
-    block22:undefined,
-    mapArray:[],
+   
+    map:undefined,
     
 
 
@@ -74,31 +52,11 @@ const Game = {
         this.background= new background (this.ctx, this.width, this.height)
         this.player1= new Player1 (this.ctx, this.width, this.height,this.Car1Color)
         this.player2= new Player2 (this.ctx, this.width, this.height,this.Car2Color)
+        this.map= new Map (this.ctx, this.width, this.height)
+        this.map.setMap(1)
+        console.log(this.map)
         
-        this.mapArray.push(
-        this.block= new Block(this.ctx,this.width,this.height,60,55,170,171),
-        this.block2= new Block(this.ctx,this.width,this.height,60,290,175,171),
-        this.block3= new Block(this.ctx,this.width,this.height,60,525,175,353),
-        this.block4= new Block(this.ctx,this.width,this.height,294,0,115,171),
-        this.block5= new Block(this.ctx,this.width,this.height,292,230,175,355),
-        this.block6= new Block(this.ctx,this.width,this.height,293,642,175,235),
-        this.block7= new Block(this.ctx,this.width,this.height,467,0,185,177),
-        this.block8= new Block(this.ctx,this.width,this.height,520,225,185,423),
-        this.block9= new Block(this.ctx,this.width,this.height,520,695,185,187),
-        this.block10= new Block(this.ctx,this.width,this.height,695,0,243,176),
-        this.block11= new Block(this.ctx,this.width,this.height,753,176,185,179),
-        this.block12= new Block(this.ctx,this.width,this.height,753,401,185,365),
-        this.block13= new Block(this.ctx,this.width,this.height,753,813,185,120),
-        this.block14= new Block(this.ctx,this.width,this.height,985,0,240,60),
-        this.block15= new Block(this.ctx,this.width,this.height,1219,0,185,177),
-        this.block16= new Block(this.ctx,this.width,this.height,985,108,185,127),
-        this.block17= new Block(this.ctx,this.width,this.height,985,283,185,540),
-        this.block18= new Block(this.ctx,this.width,this.height,985,871,476,61),
-        this.block19= new Block(this.ctx,this.width,this.height,1218,225,186,130),
-        this.block20= new Block(this.ctx,this.width,this.height,1218,401,186,189),
-        this.block21= new Block(this.ctx,this.width,this.height,1218,637,125,187),
-        this.block22= new Block(this.ctx,this.width,this.height,1395,637,65,240)
-        )
+
 
 
     },
@@ -107,7 +65,7 @@ const Game = {
         this.background.draw()
         this.player1.draw()
         this.player2.draw()
-        this.mapArray.forEach(block => {
+        this.map.arrayMap.forEach(block => {
             block.draw()
         });
         
@@ -145,7 +103,7 @@ const Game = {
 
     },
     checkCollision(){
-        this.mapArray.forEach(block => {
+        this.map.arrayMap.forEach(block => {
             if(this.player1.posX < block.posXMax &&
                 this.player1.posY < block.posYMax&&
                 this.player1.posY > block.posY - this.player1.height &&
@@ -171,7 +129,7 @@ const Game = {
     }
     const carRed = {
         left:'../Img/red-left.png',
-        right:'../Img/red-der.png',
+        right:'../Img/red-right.png',
         down:'../Img/red-down.png',
         up :'../Img/red-Up.png',
     
