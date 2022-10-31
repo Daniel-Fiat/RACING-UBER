@@ -3,6 +3,7 @@ onload = () => {
     const startGame = document.querySelector('.startGame')
     const GameScreen = document.querySelector('.GameScreen')
     const introPage = document.querySelector('.introPage')
+    
 
     startGame.addEventListener('click', () => {
         introPage.classList.toggle('nonDisplay')

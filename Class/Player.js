@@ -44,6 +44,7 @@ class Player {
        this.ctx.drawImage(this.playerImg, this.posX, this.posY, this.width, this.height)
        this.move() 
        this.position()
+      
        if (this.mission){this.mission.draw()}
        
     
@@ -158,6 +159,7 @@ class Player {
     }
     getfinish(route){
         if (route){
+            
             this.mission = route.finish
             this.missionPoints = route.points
         }

@@ -70,9 +70,10 @@ const Game = {
         this.map.routes.forEach(
             element => element.start.draw()
         )
+
         this.player2.draw()
         this.player1.draw()
-        this.player1.getfinish()
+        
        
 
     },
