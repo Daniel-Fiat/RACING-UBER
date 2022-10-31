@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-<link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Racing Uber</title>
-    
 </head>
+
 <body>
     <main class="main">
-      <img src="--logoImg--" alt="logo">
-      <h1>WELCOME TO RACING UBER!!</h1>
-      <form action="--" method="get">
-        <fieldset>
-            <legend>Player's Names:</legend>
+        <img src="--logoImg--" alt="logo">
+        <h1>WELCOME TO RACING UBER!!</h1>
+        <form action="--" method="get">
+            <fieldset>
+                <legend>Player's Names:</legend>
                 <label for="player1">Player One:</label><br>
-                <input type="text" id="player1" name="player1" ><br>
+                <input type="text" id="player1" name="player1"><br>
                 <label for="player2">Player Two:</label><br>
-                <input type="text" id="player2" name="player2" ><br><br>
-        </fieldset>
-        <fieldset>
-            <legend>Car's Colors:</legend>
+                <input type="text" id="player2" name="player2"><br><br>
+            </fieldset>
+            <fieldset>
+                <legend>Car's Colors:</legend>
                 <label for="cars">Choose a color:</label>
-                    <select id="cars">
-                        <option value="blue">Blue</option>
-                        <option value="red">Red</option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
-        </fieldset>
-        <input type="submit" value="Submit">
-      </form>
-    <button class="startGame" type="button">Start</button>
+                <select id="cars">
+                    <option value="blue">Blue</option>
+                    <option value="red">Red</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </fieldset>
+            <input type="submit" value="Submit">
+        </form>
+        <button class="startGame" type="button">Start</button>
     </main>
 
-
-    
     <canvas class="canvas"></canvas>
 
+    <script src="./Class/Map.js"></script>
+    <script src="./Class/block.js"></script>
+    <script src="./Class/Player2.js"></script>
+    <script src="./Class/Player1.js"></script>
+    <script src="./Class/Background.js"></script>
 
-    
-    <script src = "./Class/Map.js"></script>
-    <script src = "./Class/block.js"></script>
-    <script src = "./Class/Player2.js"></script>
-    <script src = "./Class/Player1.js"></script>
-    <script src = "./Class/Background.js"></script>
-    
-    <script src = "./Game/Game.js"></script>
-    <script src = "./Game/Index.js"></script>
-
+    <script src="./Game/Game.js"></script>
+    <script src="./Game/Index.js"></script>
 </body>
+
 </html>

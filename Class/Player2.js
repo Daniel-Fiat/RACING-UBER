@@ -1,4 +1,5 @@
 class Player2 {
+    // REFACTORIZAD A ÚNICA CLASE
  constructor(ctx, ctxWidth, ctxHeight, carColor)
   {
         this.ctx = ctx

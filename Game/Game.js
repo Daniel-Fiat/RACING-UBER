@@ -18,8 +18,6 @@ const Game = {
     Car2Color:undefined,
    
     map:undefined,
-    
-
 
     init(map) {
         this.canvas = document.querySelector(".canvas")
@@ -42,20 +40,18 @@ const Game = {
         this.intervalID = setInterval(() => {           
             
             this.drawAll()
-            this.checkCollision()
+            this.checkCollisions()
 
         }, 1000 / this.FPS);
 
     },
 
-    generateAll(map){
+    generateAll(){
         this.setColorCar()
         this.background= new background (this.ctx, this.width, this.height)
         this.player1= new Player1 (this.ctx, this.width, this.height,this.Car1Color)
         this.player2= new Player2 (this.ctx, this.width, this.height,this.Car2Color)
         this.map = new Map (this.ctx, this.width, this.height,this.map)
-        
-       
     },
 
     drawAll(){
@@ -97,7 +93,7 @@ const Game = {
         
 
     },
-    checkCollision(){
+    checkCollisions(){
             
         this.map.arrayMap.forEach(block => {
             if(this.player1.posX < block.posXMax &&
@@ -120,8 +116,6 @@ const Game = {
                     this.player2.stop()
                     this.player1.stop()
                 }
-        
-            
         });
       
     }

@@ -16,19 +16,19 @@ class Player1 {
         this.playerImg = new Image()
         this.playerImg.src= carColor.up
         
-        this.move()
-        this.EventListeners()
+        this.move() // SE REPITE
+        this.setEventListeners() 
     }
 
     draw(){
        this.ctx.drawImage(this.playerImg, this.posX, this.posY, this.width, this.height)
-       this.move()
+       this.move() // SE REPITE
        this.position()
       
     }
 
-   EventListeners(){
-        document.addEventListener('keydown', (e)=>{
+   setEventListeners(){
+        document.addEventListener('keydown', (e) =>{
         switch (e.code) {
                 case "KeyA":
                     this.width = 40
@@ -86,11 +86,11 @@ class Player1 {
     }
 
     move(){
-        
-        if(this.posX-10 > 0 ){if (this.left===true) {this.posX -=3;} }
-        if (this.posX+70 < this.ctxWidth){if (this.Right===true) {this.posX +=3} }
-        if(this.posY > 0){ if (this.Up===true) {this.posY -=3}}
-        if(this.posY < 900) {if (this.Down===true) {this.posY +=3}}
+        // REFACTORIZACIÓN A CORTOCIRCUITO
+        if(this.posX-10 > 0 && this.left) this.posX -=3 
+        if (this.posX+70 < this.ctxWidth && this.Right) this.posX +=3
+        if(this.posY > 0){ if (this.Up===true) {this.posY -=3}} // REFACTORIZAD CON CORTOCIRCUITOS
+        if(this.posY < 900) {if (this.Down===true) {this.posY +=3}} // REFACTORIZAD
        
     }
     
