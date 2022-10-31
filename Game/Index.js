@@ -1,4 +1,4 @@
-onload = () => Game.init(1,"blue", "red")
+onload = () => Game.init(1,"blue", "red",1,2)
 
 
 

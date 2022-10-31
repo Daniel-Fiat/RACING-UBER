@@ -13,13 +13,15 @@ const Game = {
 
     Player1Color:undefined,
     Player2Color: undefined,
+    Player1SetKey:undefined,
+    Player2SetKey:undefined,
 
     Car1Color: undefined,
     Car2Color:undefined,
    
     map:undefined,
 
-    init(map,Player1Color,Player2Color ) {
+    init(map,Player1Color,Player2Color,Player1SetKey,Player2SetKey ) {
         this.canvas = document.querySelector(".canvas")
         this.ctx = this.canvas.getContext("2d")
 
@@ -32,6 +34,8 @@ const Game = {
         this.map = map
         this.Player1Color = Player1Color
         this.Player2Color= Player2Color
+        this.Player1SetKey= Player1SetKey
+        this.Player2SetKey= Player2SetKey
         
         this.start()
     },
@@ -51,7 +55,7 @@ const Game = {
     generateAll(){
         this.setColorCar()
         this.background= new background (this.ctx, this.width, this.height)
-        this.player1= new Player1 (this.ctx, this.width, this.height,this.Car1Color)
+        this.player1= new Player1 (this.ctx, this.width, this.height,this.Car1Color,this.Player1SetKey)
         this.player2= new Player2 (this.ctx, this.width, this.height,this.Car2Color)
         this.map = new Map (this.ctx, this.width, this.height,this.map)
     },

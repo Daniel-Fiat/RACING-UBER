@@ -1,9 +1,10 @@
 class Player1 {
- constructor(ctx, ctxWidth, ctxHeight,carColor) {
+ constructor(ctx, ctxWidth, ctxHeight,carColor,setKey) {
         this.ctx = ctx
         this.ctxWidth = ctxWidth
         this.ctxHeight = ctxHeight
         this.carColor = carColor
+        this.serKey= setKey
         
         this.width= 25
         this.height = 40
