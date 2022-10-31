@@ -5,8 +5,6 @@ onload = () => {
     const introPage = document.querySelector('.introPage')
 
     startGame.addEventListener('click', () => {
-        console.dir(introPage)
-        console.dir(canvas)
         introPage.classList.toggle('nonDisplay')
         canvas.classList.toggle('nonDisplay')
         Game.init(1, "blue", "red", 1, 2)
