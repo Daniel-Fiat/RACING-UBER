@@ -28,14 +28,14 @@ class Player {
         this.rightKey=undefined
         this.stopKey=undefined
         
-     
+        
         this.setEventListeners() 
         this.setPlayerkey()
     }
 
     draw(){
        this.ctx.drawImage(this.playerImg, this.posX, this.posY, this.width, this.height)
-       this.move() // SE REPITE
+       this.move() 
        this.position()
       
     }
