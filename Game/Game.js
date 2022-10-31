@@ -24,7 +24,7 @@ const Game = {
     map:undefined,
 
     init(map,Player1Color,Player2Color,Player1SetKey,Player2SetKey ) {
-        this.canvas = document.querySelector(".canvas")
+        this.canvas = document.querySelector("#canvas")
         this.ctx = this.canvas.getContext("2d")
 
         this.width = 1478
@@ -64,9 +64,12 @@ const Game = {
 
     drawAll(){
         this.background.draw()
-        this.map.arrayMap.forEach(block => {
+        this.map.blockMap.forEach(block => {
             block.draw()
         });
+        this.map.routes.forEach(
+            element => element.start.draw()
+        )
         this.player2.draw()
         this.player1.draw()
        
@@ -123,7 +126,7 @@ const Game = {
     },
     checkCollisions(){
             
-        this.map.arrayMap.forEach(block => {
+        this.map.blockMap.forEach(block => {
             if(this.player1.posX < block.posXMax &&
                 this.player1.posY < block.posYMax&&
                 this.player1.posY > block.posY - this.player1.height &&

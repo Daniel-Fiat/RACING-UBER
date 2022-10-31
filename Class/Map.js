@@ -3,14 +3,15 @@ class Map {
         this.ctx = ctx
         this.ctxWidth = ctxWidth
         this.ctxHeight = ctxHeight
-        this.arrayMap = []
+        this.blockMap = []
+        this.routes=[]
         this.numMap = numMap
         this.setMap()
   }
    setMap(){
     switch (this.numMap) {
         case 1:
-            this.arrayMap.push(
+            this.blockMap.push(
                 new Block(this.ctx,this.width,this.height,60,55,170,171),
                 new Block(this.ctx,this.width,this.height,60,290,175,171),
                 new Block(this.ctx,this.width,this.height,60,525,175,353),
@@ -34,8 +35,24 @@ class Map {
                 new Block(this.ctx,this.width,this.height,1218,637,125,187),
                 new Block(this.ctx,this.width,this.height,1395,637,65,240)
                 )
-                       
-            break;
+            this.routes.push(
+                {
+                start:new Block(this.ctx,this.width,this.height,1395,637,65,240),
+                finish:new Block(this.ctx,this.width,this.height,1395,637,65,240),
+                points:500
+                },
+                {
+                start:new Block(this.ctx,this.width,this.height,1395,637,65,240),
+                finish:new Block(this.ctx,this.width,this.height,1395,637,65,240),
+                points:500
+                },
+                {
+                start:new Block(this.ctx,this.width,this.height,1395,637,65,240),
+                finish:new Block(this.ctx,this.width,this.height,1395,637,65,240),
+                points:500
+                }
+            )
+             break;
     
         default:
             break;
