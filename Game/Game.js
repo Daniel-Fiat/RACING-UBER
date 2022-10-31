@@ -15,6 +15,8 @@ const Game = {
     Player2Color: undefined,
     Player1SetKey:undefined,
     Player2SetKey:undefined,
+    startPos1: {x:725,y:900},
+    startPos2: {x:950,y:900},
 
     Car1Color: undefined,
     Car2Color:undefined,
@@ -22,7 +24,7 @@ const Game = {
     map:undefined,
 
     init(map,Player1Color,Player2Color,Player1SetKey,Player2SetKey ) {
-        this.canvas = document.querySelector(".canvas")
+        this.canvas = document.querySelector("#canvas")
         this.ctx = this.canvas.getContext("2d")
 
         this.width = 1478
@@ -55,19 +57,22 @@ const Game = {
     generateAll(){
         this.setColorCar()
         this.background= new background (this.ctx, this.width, this.height)
-        this.player1= new Player1 (this.ctx, this.width, this.height,this.Car1Color,this.Player1SetKey)
-        this.player2= new Player2 (this.ctx, this.width, this.height,this.Car2Color)
+        this.player1= new Player (this.ctx, this.width, this.height,this.Car1Color,this.Player1SetKey,this.startPos1)
+        this.player2= new Player (this.ctx, this.width, this.height,this.Car2Color,this.Player2SetKey,this.startPos2)
         this.map = new Map (this.ctx, this.width, this.height,this.map)
     },
 
     drawAll(){
         this.background.draw()
-        this.map.arrayMap.forEach(block => {
+        this.map.blockMap.forEach(block => {
             block.draw()
         });
+        this.map.routes.forEach(
+            element => element.start.draw()
+        )
         this.player2.draw()
         this.player1.draw()
-        console.log(this.map.numMap)
+       
 
     },
 
@@ -75,10 +80,20 @@ const Game = {
 
         switch (this.Player1Color) {
             case "blue":
-                this.Car1Color = carBlue
+                this.Car1Color = {
+                    left:'../Img/blue-left.png',
+                    right:'../Img/blue-right.png',
+                    down:'../Img/blue-down.png',
+                    up :'../Img/blue-up.png',
+                    }
                 break;
             case "red":
-                this.Car1Color = carRed
+                this.Car1Color = {
+                    left:'../Img/red-left.png',
+                    right:'../Img/red-right.png',
+                    down:'../Img/red-down.png',
+                    up :'../Img/red-Up.png',
+                    }
                 break;
         
             default:
@@ -111,7 +126,7 @@ const Game = {
     },
     checkCollisions(){
             
-        this.map.arrayMap.forEach(block => {
+        this.map.blockMap.forEach(block => {
             if(this.player1.posX < block.posXMax &&
                 this.player1.posY < block.posYMax&&
                 this.player1.posY > block.posY - this.player1.height &&
@@ -138,17 +153,3 @@ const Game = {
 
 }
 
-    const carBlue = {
-        left:'../Img/blue-left.png',
-        right:'../Img/blue-right.png',
-        down:'../Img/blue-down.png',
-        up :'../Img/blue-up.png',
-    
-    }
-    const carRed = {
-        left:'../Img/red-left.png',
-        right:'../Img/red-right.png',
-        down:'../Img/red-down.png',
-        up :'../Img/red-Up.png',
-    
-    }
