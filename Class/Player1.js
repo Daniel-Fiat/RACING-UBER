@@ -15,6 +15,11 @@ class Player1 {
 
         this.playerImg = new Image()
         this.playerImg.src= carColor.up
+
+        this.left=false                    
+        this.Right=false
+        this.Down=false
+        this.Up=false
         
         this.move() // SE REPITE
         this.setEventListeners() 
@@ -89,8 +94,8 @@ class Player1 {
         // REFACTORIZACIÓN A CORTOCIRCUITO
         if(this.posX-10 > 0 && this.left) this.posX -=3 
         if (this.posX+70 < this.ctxWidth && this.Right) this.posX +=3
-        if(this.posY > 0){ if (this.Up===true) {this.posY -=3}} // REFACTORIZAD CON CORTOCIRCUITOS
-        if(this.posY < 900) {if (this.Down===true) {this.posY +=3}} // REFACTORIZAD
+        if(this.posY > 0 && this.Up===true) this.posY -=3 
+        if(this.posY < 900 && this.Down===true) this.posY +=3
        
     }
     

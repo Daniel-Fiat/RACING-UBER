@@ -11,15 +11,15 @@ const Game = {
     player1: undefined,
     player2: undefined,
 
-    Player1Color:"red",
-    Player2Color: "blue",
+    Player1Color:undefined,
+    Player2Color: undefined,
 
     Car1Color: undefined,
     Car2Color:undefined,
    
     map:undefined,
 
-    init(map) {
+    init(map,Player1Color,Player2Color ) {
         this.canvas = document.querySelector(".canvas")
         this.ctx = this.canvas.getContext("2d")
 
@@ -30,6 +30,8 @@ const Game = {
         this.canvas.height = this.height
 
         this.map = map
+        this.Player1Color = Player1Color
+        this.Player2Color= Player2Color
         
         this.start()
     },
@@ -81,10 +83,20 @@ const Game = {
 
         switch (this.Player2Color) {
             case "blue":
-                this.Car2Color = carBlue
+                this.Car2Color = {
+                    left:'../Img/blue-left.png',
+                    right:'../Img/blue-right.png',
+                    down:'../Img/blue-down.png',
+                    up :'../Img/blue-up.png',
+                    }
                 break;
             case "red":
-                this.Car2Color = carRed
+                this.Car2Color = {
+                    left:'../Img/red-left.png',
+                    right:'../Img/red-right.png',
+                    down:'../Img/red-down.png',
+                    up :'../Img/red-Up.png',
+                    }
                 break;
         
             default:
