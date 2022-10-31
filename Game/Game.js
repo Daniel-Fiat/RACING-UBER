@@ -55,8 +55,8 @@ const Game = {
     generateAll(){
         this.setColorCar()
         this.background= new background (this.ctx, this.width, this.height)
-        this.player1= new Player1 (this.ctx, this.width, this.height,this.Car1Color,this.Player1SetKey)
-        this.player2= new Player2 (this.ctx, this.width, this.height,this.Car2Color)
+        this.player1 = new Player (this.ctx, this.width, this.height,this.Car1Color,this.Player1SetKey)
+        this.player2 = new Player (this.ctx, this.width, this.height,this.Car2Color,this.Player2SetKey)
         this.map = new Map (this.ctx, this.width, this.height,this.map)
     },
 
@@ -67,7 +67,7 @@ const Game = {
         });
         this.player2.draw()
         this.player1.draw()
-        console.log(this.map.numMap)
+       
 
     },
 
@@ -75,10 +75,20 @@ const Game = {
 
         switch (this.Player1Color) {
             case "blue":
-                this.Car1Color = carBlue
+                this.Car1Color = {
+                    left:'../Img/blue-left.png',
+                    right:'../Img/blue-right.png',
+                    down:'../Img/blue-down.png',
+                    up :'../Img/blue-up.png',
+                    }
                 break;
             case "red":
-                this.Car1Color = carRed
+                this.Car1Color = {
+                    left:'../Img/red-left.png',
+                    right:'../Img/red-right.png',
+                    down:'../Img/red-down.png',
+                    up :'../Img/red-Up.png',
+                    }
                 break;
         
             default:
@@ -138,17 +148,3 @@ const Game = {
 
 }
 
-    const carBlue = {
-        left:'../Img/blue-left.png',
-        right:'../Img/blue-right.png',
-        down:'../Img/blue-down.png',
-        up :'../Img/blue-up.png',
-    
-    }
-    const carRed = {
-        left:'../Img/red-left.png',
-        right:'../Img/red-right.png',
-        down:'../Img/red-down.png',
-        up :'../Img/red-Up.png',
-    
-    }

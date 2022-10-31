@@ -1,10 +1,10 @@
-class Player1 {
+class Player {
  constructor(ctx, ctxWidth, ctxHeight,carColor,setKey) {
         this.ctx = ctx
         this.ctxWidth = ctxWidth
         this.ctxHeight = ctxHeight
         this.carColor = carColor
-        this.serKey= setKey
+        this.setKey= setKey
         
         this.width= 25
         this.height = 40
@@ -21,9 +21,16 @@ class Player1 {
         this.Right=false
         this.Down=false
         this.Up=false
+
+        this.upKey= undefined
+        this.downKey=undefined
+        this.leftKey=undefined
+        this.rightKey=undefined
+        this.stopKey=undefined
         
-        this.move() // SE REPITE
+     
         this.setEventListeners() 
+        this.setPlayerkey()
     }
 
     draw(){
@@ -36,7 +43,7 @@ class Player1 {
    setEventListeners(){
         document.addEventListener('keydown', (e) =>{
         switch (e.code) {
-                case "KeyA":
+                case this.leftKey:
                     this.width = 40
                     this.height= 25
                     this.playerImg.src = this.carColor.left
@@ -46,7 +53,7 @@ class Player1 {
                     this.Up=false
                     break;
 
-                case "KeyD":
+                case this.rightKey:
 
                     this.width = 40
                     this.height= 25
@@ -57,7 +64,7 @@ class Player1 {
                     this.Up=false
                     break;
 
-                case "KeyS":
+                case this.downKey:
 
                     this.width = 25
                     this.height= 40
@@ -68,7 +75,7 @@ class Player1 {
                     this.Up=false
                     break;
 
-                case "KeyW":
+                case this.upKey:
 
                     this.width = 25
                     this.height= 40
@@ -79,7 +86,7 @@ class Player1 {
                     this.Up=true
                     break;
 
-                case "Space":
+                case this.stopKey:
                   
                     this.stop()
                     break;
@@ -92,7 +99,7 @@ class Player1 {
     }
 
     move(){
-        // REFACTORIZACIÓN A CORTOCIRCUITO
+        
         if(this.posX-10 > 0 && this.left) this.posX -=3 
         if (this.posX+70 < this.ctxWidth && this.Right) this.posX +=3
         if(this.posY > 0 && this.Up===true) this.posY -=3 
@@ -112,6 +119,31 @@ class Player1 {
         this.posXMax= this.posX + this.width
         this.posX=this.posX
         this.posY=this.posY
+    }
+    setPlayerkey(){
+        switch (this.setKey) {
+            case 1:
+
+                this.leftKey = "KeyA"
+                this.rightKey= "KeyD"
+                this.downKey= "KeyS"
+                this.upKey= "KeyW"
+                this.stopKey = "Space"
+
+                break;
+            case 2:
+
+                this.leftKey = "ArrowLeft"
+                this.rightKey= "ArrowRight"
+                this.downKey= "ArrowDown"
+                this.upKey= "ArrowUp"
+                this.stopKey = "Numpad0"
+
+                break;
+        
+            default:
+                break;
+        }
     }
 
 } 
