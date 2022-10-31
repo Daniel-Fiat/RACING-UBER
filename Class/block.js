@@ -13,6 +13,7 @@ class Block {
     }
     
     draw(){
+       
         this.ctx.clearRect(this.posX,this.posY,this.width,this.height)
     }
 }

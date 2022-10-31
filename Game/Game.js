@@ -63,15 +63,16 @@ const Game = {
     },
 
     drawAll(){
-        this.background.draw()
         this.map.blockMap.forEach(block => {
             block.draw()
         });
+        this.background.draw()
         this.map.routes.forEach(
             element => element.start.draw()
         )
         this.player2.draw()
         this.player1.draw()
+        this.player1.getfinish()
        
 
     },
@@ -147,8 +148,61 @@ const Game = {
                     this.player2.stop()
                     this.player1.stop()
                 }
-        });
-      
+        })
+
+        this.map.routes.forEach((route, index) => {
+            if(!this.player1.mission){
+            if(this.player1.posX < route.start.posXMax &&
+                this.player1.posY < route.start.posYMax&&
+                this.player1.posY > route.start.posY - this.player1.height &&
+                this.player1.posX > route.start.posX - this.player1.width )
+                {
+                    this.player1.getfinish(this.player1.mission = route)
+                    this.map.routes.splice(index,1)
+                }
+                }
+                
+        })
+        this.map.routes.forEach((route, index) => {
+            if(!this.player2.mission){
+            if(this.player2.posX < route.start.posXMax &&
+                this.player2.posY < route.start.posYMax&&
+                this.player2.posY > route.start.posY - this.player2.height &&
+                this.player2.posX > route.start.posX - this.player2.width )
+                {
+                    this.player2.getfinish(this.player2.mission = route)
+                    this.map.routes.splice(index,1)
+                }
+                }
+                
+        })
+
+        if(this.player1.mission){
+            if(
+                this.player1.posX < this.player1.mission.posXMax &&
+                this.player1.posY < this.player1.mission.posYMax&&
+                this.player1.posY > this.player1.mission.posY - this.player1.height &&
+                this.player1.posX > this.player1.mission.posX - this.player1.width ){
+                    this.player1.PlayerTotalPoints += this.player1.missionPoints
+                    this.player1.mission= undefined
+                    console.log(this.player1.PlayerTotalPoints)
+                }
+        
+
+        }
+        if(this.player2.mission){
+            if(
+                this.player2.posX < this.player2.mission.posXMax &&
+                this.player2.posY < this.player2.mission.posYMax&&
+                this.player2.posY > this.player2.mission.posY - this.player2.height &&
+                this.player2.posX > this.player2.mission.posX - this.player2.width ){
+                    this.player2.PlayerTotalPoints += this.player2.missionPoints
+                    this.player2.mission= undefined
+                    console.log(this.player2.PlayerTotalPoints)
+                }
+        
+
+        }
     }
 
 }

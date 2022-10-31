@@ -37,20 +37,21 @@ class Map {
                 )
             this.routes.push(
                 {
-                start:new Block(this.ctx,this.width,this.height,1395,637,65,240),
-                finish:new Block(this.ctx,this.width,this.height,1395,637,65,240),
+                start:new Block(this.ctx,this.width,this.height,700,500,20,20),
+                finish:new Block(this.ctx,this.width,this.height,700,10,20,20),
                 points:500
                 },
                 {
-                start:new Block(this.ctx,this.width,this.height,1395,637,65,240),
-                finish:new Block(this.ctx,this.width,this.height,1395,637,65,240),
+                start:new Block(this.ctx,this.width,this.height,700,700,20,20),
+                finish:new Block(this.ctx,this.width,this.height,10,700,20,20),
                 points:500
                 },
                 {
-                start:new Block(this.ctx,this.width,this.height,1395,637,65,240),
-                finish:new Block(this.ctx,this.width,this.height,1395,637,65,240),
+                start:new Block(this.ctx,this.width,this.height,700,900,20,20),
+                finish:new Block(this.ctx,this.width,this.height,100,10,20,20),
                 points:500
-                }
+                },
+              
             )
              break;
     

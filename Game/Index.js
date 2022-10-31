@@ -1,7 +1,7 @@
 onload = () => {
     //Game.init(1, "blue", "red", 1, 2)// (map,player1color,player2color,playerkey,playerkey)
     const startGame = document.querySelector('.startGame')
-    const canvas = document.querySelector('#canvas')
+    const GameScreen = document.querySelector('.GameScreen')
     const introPage = document.querySelector('.introPage')
 
     startGame.addEventListener('click', () => {

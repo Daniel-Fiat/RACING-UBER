@@ -16,6 +16,7 @@ class Player {
 
         this.playerImg = new Image()
         this.playerImg.src= carColor.up
+        this.PlayerTotalPoints= 0
 
         this.left=false                    
         this.Right=false
@@ -29,6 +30,10 @@ class Player {
         this.stopKey=undefined
 
         this.startPos=startPos
+
+        this.mission= undefined
+        this.missionPoints = undefined
+
         
         
         this.setEventListeners() 
@@ -39,6 +44,10 @@ class Player {
        this.ctx.drawImage(this.playerImg, this.posX, this.posY, this.width, this.height)
        this.move() 
        this.position()
+       if (this.mission){this.mission.draw()}
+       
+    
+      
       
     }
 
@@ -146,6 +155,13 @@ class Player {
             default:
                 break;
         }
+    }
+    getfinish(route){
+        if (route){
+            this.mission = route.finish
+            this.missionPoints = route.points
+        }
+
     }
 
 } 
