@@ -11,72 +11,72 @@
 </head>
 
 <body>
+    <section class="introPage">
+        <main class="main">
+            <h1><img src="./Img/ironhackGame-logo.png" alt="logo">WELCOME TO RACING UBER!!</h1>
+            <form action="--" method="get">
+                <fieldset>
+                    <legend>Player's Names:</legend>
+                    <label for="player1">Player One:</label><br>
+                    <input type="text" id="player1" name="player1"><br>
+                    <label for="player2">Player Two:</label><br>
+                    <input type="text" id="player2" name="player2"><br><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Car's Colors:</legend>
+                    <label for="cars1">Player One:</label>
+                    <select id="cars1">
+                        <option value="blue">Blue</option>
+                        <option value="red">Red</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                    <label for="cars2">Player Two:</label>
+                    <select id="cars2">
+                        <option value="green">Green</option>
+                        <option value="yellow">Yellow</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </fieldset>
+            </form>
+        </main>
+        <div class="startButton">
+            <button class="startGame" type="button">Start Game!</button>
+        </div>
+        <div class="container">
+            <article class="instructions">
+                <h2>Instructions:</h2>
+                <img src="/Img/playerOne-instructions.png.jpg" alt="player1">
+                <img src="/Img/playerTwo-instructions.png.jpg" alt="player2">
+            </article>
+            <article class="rules">
+                <h2>Rules:</h2>
+                <p>You are uber drivers racing to see who's the fastest, but hey!
+                    you have a time limit,<br> so try your best to
+                    pick up your customers and get money as fast as you can
+                    before the other player! <br>When the time is up,
+                    there can only be one winner... Who is it gonna be...? <br> HAPPY RACING!</p>
+            </article>
+        </div>
+    </section>
 
-    <main class="main">
-        <h1><img src="./Img/ironhackGame-logo.png" alt="logo">WELCOME TO RACING UBER!!</h1>
-        <form action="--" method="get">
-            <fieldset>
-                <legend>Player's Names:</legend>
-                <label for="player1">Player One:</label><br>
-                <input type="text" id="player1" name="player1"><br>
-                <label for="player2">Player Two:</label><br>
-                <input type="text" id="player2" name="player2"><br><br>
-            </fieldset>
-            <fieldset>
-                <legend>Car's Colors:</legend>
-                <label for="cars1">Player One:</label>
-                <select id="cars1">
-                    <option value="blue">Blue</option>
-                    <option value="red">Red</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-                <label for="cars2">Player Two:</label>
-                <select id="cars2">
-                    <option value="green">Green</option>
-                    <option value="yellow">Yellow</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-            </fieldset>
-            <input type="submit" value="Submit">
-        </form>
-    </main>
-    <div class="startButton">
-        <button class="startGame" type="button">Start Game!</button>
-    </div>
-    <div class="container">
-        <article class="instructions">
-            <h2>Instructions:</h2>
-            <img src="/Img/playerOne-instructions.png.jpg" alt="player1">
-            <img src="/Img/playerTwo-instructions.png.jpg" alt="player2">
-        </article>
-        <article class="rules">
-            <h2>Rules:</h2>
-            <p>You are uber drivers racing to see who's the fastest, but hey!
-                you have a time limit,<br> so try your best to
-                pick up your customers and get money as fast as you can
-                before the other player! <br>When the time is up,
-                there can only be one winner... Who is it gonna be...? <br> HAPPY RACING!</p>
-        </article>
-    </div>
 
-
-    
     <canvas class="canvas"></canvas>
 
 
-    
-    <script src = "./Class/Map.js"></script>
-    <script src = "./Class/block.js"></script>
-    <script src = "./Class/Player2.js"></script>
-    <script src = "./Class/Player1.js"></script>
-    <script src = "./Class/Background.js"></script>
-    
-    <script src = "./Game/Game.js"></script>
-    <script src = "./Game/Index.js"></script>
+
+    <script src="./Class/Map.js"></script>
+    <script src="./Class/block.js"></script>
+    <script src="./Class/Player2.js"></script>
+    <script src="./Class/Player1.js"></script>
+    <script src="./Class/Background.js"></script>
+
+    <script src="./Game/Game.js"></script>
+    <script src="./Game/Index.js"></script>
 
     <script src="./Game/Game.js"></script>
     <script src="./Game/Index.js"></script>
 </body>
+
 </html>
