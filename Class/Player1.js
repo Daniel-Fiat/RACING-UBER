@@ -1,5 +1,5 @@
 class Player {
- constructor(ctx, ctxWidth, ctxHeight,carColor,setKey) {
+ constructor(ctx, ctxWidth, ctxHeight,carColor,setKey,startPos) {
         this.ctx = ctx
         this.ctxWidth = ctxWidth
         this.ctxHeight = ctxHeight
@@ -9,8 +9,8 @@ class Player {
         this.width= 25
         this.height = 40
 
-        this.posX=250
-        this.posY=500
+        this.posX = startPos.x
+        this.posY = startPos.y
         this.posYMax= undefined
         this.posXMax= undefined
 
@@ -27,6 +27,8 @@ class Player {
         this.leftKey=undefined
         this.rightKey=undefined
         this.stopKey=undefined
+
+        this.startPos=startPos
         
         
         this.setEventListeners() 

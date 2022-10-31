@@ -15,6 +15,8 @@ const Game = {
     Player2Color: undefined,
     Player1SetKey:undefined,
     Player2SetKey:undefined,
+    startPos1: {x:725,y:900},
+    startPos2: {x:950,y:900},
 
     Car1Color: undefined,
     Car2Color:undefined,
@@ -55,8 +57,8 @@ const Game = {
     generateAll(){
         this.setColorCar()
         this.background= new background (this.ctx, this.width, this.height)
-        this.player1= new Player (this.ctx, this.width, this.height,this.Car1Color,this.Player1SetKey)
-        this.player2= new Player (this.ctx, this.width, this.height,this.Car2Color,this.Player2SetKey)
+        this.player1= new Player (this.ctx, this.width, this.height,this.Car1Color,this.Player1SetKey,this.startPos1)
+        this.player2= new Player (this.ctx, this.width, this.height,this.Car2Color,this.Player2SetKey,this.startPos2)
         this.map = new Map (this.ctx, this.width, this.height,this.map)
     },
 
