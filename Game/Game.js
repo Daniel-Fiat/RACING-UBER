@@ -15,52 +15,65 @@ const Game = {
 
     Car1Color: undefined,
     Car2Color:undefined,
-
-    block:undefined,
+   
+    map:undefined,
     
 
 
-    init() {
+    init(map) {
         this.canvas = document.querySelector(".canvas")
         this.ctx = this.canvas.getContext("2d")
 
-        this.width = window.innerWidth/1.0005
-        this.height = window.innerHeight/1.004
+        this.width = 1478
+        this.height = 933
 
         this.canvas.width = this.width
         this.canvas.height = this.height
-
-        this.start()
+        
+        this.start(map)
     },
-
-    start() {        
-        this.generateAll()
-       
+    
+    start(map) {        
+        this.generateAll(map)
+        
         this.intervalID = setInterval(() => {           
             
             this.drawAll()
             this.checkCollision()
+            
+           
 
             
         }, 1000 / this.FPS);
 
     },
 
-    generateAll(){
+    generateAll(map){
         this.setColorCar()
         this.background= new background (this.ctx, this.width, this.height)
         this.player1= new Player1 (this.ctx, this.width, this.height,this.Car1Color)
         this.player2= new Player2 (this.ctx, this.width, this.height,this.Car2Color)
-        this.block= new Block(this.ctx,this.width,this.height,75,50,230,180)
+        this.map= new Map (this.ctx, this.width, this.height)
+        this.map.setMap(map)
+        
+        
+
 
 
     },
 
     drawAll(){
+        this.map.arrayMap.forEach(block => {
+            block.draw()
+        });
         this.background.draw()
-        this.player1.draw()
         this.player2.draw()
-        this.block.draw()
+        this.player1.draw()
+        
+        
+        
+        
+        
         
 
     },
@@ -94,16 +107,32 @@ const Game = {
 
     },
     checkCollision(){
-        if(this.player1.posX < this.block.posXMax &&
-            this.player1.posY < this.block.posYMax&&
-            this.player1.posY > this.block.posY - this.player1.height &&
-            this.player1.posX > this.block.posX - this.player1.width )
-            {this.player1.stop()}
-        if(this.player2.posX < this.block.posXMax &&
-            this.player2.posY < this.block.posYMax&&
-            this.player2.posY > this.block.posY - this.player2.height &&
-            this.player2.posX > this.block.posX - this.player2.width )
-            {this.player2.stop()}
+            
+        this.map.arrayMap.forEach(block => {
+            if(this.player1.posX < block.posXMax &&
+                this.player1.posY < block.posYMax&&
+                this.player1.posY > block.posY - this.player1.height &&
+                this.player1.posX > block.posX - this.player1.width )
+                {this.player1.stop()}
+                
+            if(this.player2.posX < block.posXMax &&
+                this.player2.posY < block.posYMax&&
+                this.player2.posY > block.posY - this.player2.height &&
+                this.player2.posX > block.posX - this.player2.width )
+                {this.player2.stop()}
+                
+            if( this.player2.posX < this.player1.posXMax &&
+                this.player2.posY < this.player1.posYMax &&
+                this.player2.posY > this.player1.posY - this.player2.height   &&
+                this.player2.posX > this.player1.posX - this.player2.width)
+                {
+                    this.player2.stop()
+                    this.player1.stop()
+                }
+        
+            
+        });
+      
     }
 
 }
@@ -117,7 +146,7 @@ const Game = {
     }
     const carRed = {
         left:'../Img/red-left.png',
-        right:'../Img/red-der.png',
+        right:'../Img/red-right.png',
         down:'../Img/red-down.png',
         up :'../Img/red-Up.png',
     
