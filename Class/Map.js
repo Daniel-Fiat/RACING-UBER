@@ -1,13 +1,14 @@
 class Map {
-  constructor(ctx, ctxWidth, ctxHeight,carColor) {
+  constructor(ctx, ctxWidth, ctxHeight,numMap) {
         this.ctx = ctx
         this.ctxWidth = ctxWidth
         this.ctxHeight = ctxHeight
-        this.carColor = carColor
-        this.arrayMap= []
+        this.arrayMap = []
+        this.numMap = numMap
+        this.setMap()
   }
-   setMap(numMap){
-    switch (numMap) {
+   setMap(){
+    switch (this.numMap) {
         case 1:
             this.arrayMap.push(
                 new Block(this.ctx,this.width,this.height,60,55,170,171),
