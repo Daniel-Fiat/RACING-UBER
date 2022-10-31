@@ -7,6 +7,7 @@ const Game = {
     height: undefined,
 
     background: undefined,
+    map: undefined,
     player1: undefined,
     player2: undefined,
 
@@ -29,21 +30,20 @@ const Game = {
 
         this.canvas.width = this.width
         this.canvas.height = this.height
+
+        this.map = map
         
-        this.start(map)
+        this.start()
     },
     
-    start(map) {        
-        this.generateAll(map)
+    start() {        
+        this.generateAll()
         
         this.intervalID = setInterval(() => {           
             
             this.drawAll()
             this.checkCollision()
-            
-           
 
-            
         }, 1000 / this.FPS);
 
     },
@@ -53,28 +53,19 @@ const Game = {
         this.background= new background (this.ctx, this.width, this.height)
         this.player1= new Player1 (this.ctx, this.width, this.height,this.Car1Color)
         this.player2= new Player2 (this.ctx, this.width, this.height,this.Car2Color)
-        this.map= new Map (this.ctx, this.width, this.height)
-        this.map.setMap(map)
+        this.map = new Map (this.ctx, this.width, this.height,this.map)
         
-        
-
-
-
+       
     },
 
     drawAll(){
+        this.background.draw()
         this.map.arrayMap.forEach(block => {
             block.draw()
         });
-        this.background.draw()
         this.player2.draw()
         this.player1.draw()
-        
-        
-        
-        
-        
-        
+        console.log(this.map.numMap)
 
     },
 
