@@ -35,7 +35,7 @@ body {
 
 }
 
-form {
+.playerInfo {
     width: 60vw;
     max-width: 300px;
     min-width: 100px;
@@ -43,16 +43,6 @@ form {
     padding: 2em 3em 2em 3em;
     color: #fff;
 
-}
-
-fieldset {
-    border: none;
-    padding: 2rem 0;
-
-}
-
-fieldset:last-of-type {
-    border-bottom: none;
 }
 
 label {
@@ -135,8 +125,8 @@ input[type=text] {
     text-align: center;
 }
 
-.GameScreen{
+.GameScreen {
     display: flex;
     justify-content: center;
-    
+
 }

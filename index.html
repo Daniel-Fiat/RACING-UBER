@@ -14,32 +14,28 @@
     <section class="introPage">
         <main class="main">
             <h1><img src="./Img/ironhackGame-logo.png" alt="logo">WELCOME TO RACING UBER!!</h1>
-            <form action="--" method="get">
-                <fieldset>
-                    <legend>Player's Names:</legend>
-                    <label for="player1">Player One:</label><br>
-                    <input type="text" id="player1" name="player1"><br>
-                    <label for="player2">Player Two:</label><br>
-                    <input type="text" id="player2" name="player2"><br><br>
-                </fieldset>
-                <fieldset>
-                    <legend>Car's Colors:</legend>
-                    <label for="cars1">Player One:</label>
-                    <select id="cars1">
-                        <option value="blue">Blue</option>
-                        <option value="red">Red</option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
-                    <label for="cars2">Player Two:</label>
-                    <select id="cars2">
-                        <option value="green">Green</option>
-                        <option value="yellow">Yellow</option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
-                </fieldset>
-            </form>
+            <div class="playerInfo">
+                <h2>Player's names:</h2>
+                <label for="player1">Player One:</label><br>
+                <input type="text" id="player1" name="player1"><br>
+                <label for="player2">Player Two:</label><br>
+                <input type="text" id="player2" name="player2"><br><br>
+                <h2>Choose your Color:</h2>
+                <label for="cars1">Player One:</label>
+                <select id="cars1">
+                    <option value="blue">Blue</option>
+                    <option value="red">Red</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                <label for="cars2">Player Two:</label>
+                <select id="cars2">
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
         </main>
         <div class="startButton">
             <button class="startGame" type="button">Start Game!</button>
@@ -68,7 +64,7 @@
 
 
     <script src="./Class/Background.js"></script>
-    
+
     <script src="./Class/Map.js"></script>
     <script src="./Class/leftTunel.js"></script>
     <script src="./Class/RightTunel.js"></script>
@@ -79,7 +75,7 @@
     <script src="./Class/Player.js"></script>
     <script src="./Class/destiny.js"></script>
     <script src="./Class/passengers.js"></script>
-    
+
     <script src="./Game/Game.js"></script>
     <script src="./Game/Index.js"></script>
 </body>
