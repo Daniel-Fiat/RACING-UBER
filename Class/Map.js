@@ -50,20 +50,18 @@ class Map {
                 
             this.routes.push(
                 {
-                start:new Passengers(this.ctx,this.width,this.height,250,450,20,15),
-                finish:new Destiny(this.ctx,this.width,this.height,650,10,20,20),
+                start:new Passengers(this.ctx,this.width,this.height,250,600,20,15),
+                finish:new Destiny(this.ctx,this.width,this.height,490,10,35,35),
                 points:250
                 },
-               // {
-               // start:new Passengers(this.ctx,this.width,this.height,950,700,20,20),
-               // finish:new Destiny(this.ctx,this.width,this.height,10,700,20,20),
-               // points:380
-               // },
-               // {
-               // start:new Passengers(this.ctx,this.width,this.height,100,900,20,20),
-               // finish:new Destiny(this.ctx,this.width,this.height,250,10,20,20),
-               // points:500
-               // },
+                {
+                //start:new Passengers(this.ctx,this.width,this.height,860,700,20,20),
+                start:new Passengers(this.ctx,this.width,this.height,880,600,20,15),
+                finish:new Destiny(this.ctx,this.width,this.height,1460,10,35,35),
+                points:300
+                },
+               
+               
               
             )
 
