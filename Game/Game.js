@@ -63,16 +63,10 @@ const Game = {
     },
 
     drawAll(){
+        this.map.blockMap.forEach(block =>  block.draw())
         this.background.draw()
-        this.map.tunelsLower.forEach(
-            element => element.start.draw()
-        )
-        this.map.blockMap.forEach(block => {
-            block.draw()
-        });
-        this.map.routes.forEach(
-            element => element.start.draw()
-        )
+        this.map.tunelsLower.forEach(element => element.start.draw())
+        this.map.routes.forEach(element => element.start.draw())
         this.player2.draw()
         this.player1.draw()
         
@@ -206,12 +200,14 @@ const Game = {
         
 
         }
+
+        //// tunels ////
         this.map.tunelsLower.forEach(tunel => {
             
-            if( this.player2.left&&
+            if( this.player2.Down &&
                 this.player2.posX < tunel.start.posXMax &&
                 this.player2.posY < tunel.start.posYMax&&
-                this.player2.posY > tunel.start.posY - this.player2.height &&
+                this.player2.posY > tunel.start.posY &&
                 this.player2.posX >  tunel.start.posX
     
             )
@@ -222,38 +218,10 @@ const Game = {
         });
         this.map.tunelsLower.forEach(tunel => {
             
-            if( this.player1.left&&
+            if( this.player1.Down &&
                 this.player1.posX < tunel.start.posXMax &&
                 this.player1.posY < tunel.start.posYMax&&
-                this.player1.posY > tunel.start.posY - this.player1.height &&
-                this.player1.posX >  tunel.start.posX
-    
-            )
-            {
-                this.player1.posX= tunel.redirect[0]
-                this.player1.posY= tunel.redirect[1]
-            }
-        });
-        this.map.tunelsLeft.forEach(tunel => {
-            
-            if( this.player2.left&&
-                this.player2.posX < tunel.start.posXMax &&
-                this.player2.posY < tunel.start.posYMax&&
-                this.player2.posY > tunel.start.posY - this.player2.height &&
-                this.player2.posX >  tunel.start.posX
-    
-            )
-            {
-                this.player2.posX= tunel.redirect[0]
-                this.player2.posY= tunel.redirect[1]
-            }
-        });
-        this.map.tunelsLeft.forEach(tunel => {
-            
-            if( this.player1.left&&
-                this.player1.posX < tunel.start.posXMax &&
-                this.player1.posY < tunel.start.posYMax&&
-                this.player1.posY > tunel.start.posY - this.player1.height &&
+                this.player1.posY > tunel.start.posY &&
                 this.player1.posX >  tunel.start.posX
     
             )
