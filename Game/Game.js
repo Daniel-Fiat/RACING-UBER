@@ -15,8 +15,8 @@ const Game = {
     Player2Color: undefined,
     Player1SetKey:undefined,
     Player2SetKey:undefined,
-    startPos1: {x:725,y:900},
-    startPos2: {x:950,y:900},
+    startPos1: {x:860,y:700},
+    startPos2: {x:1500,y:400},
 
     Car1Color: undefined,
     Car2Color:undefined,
@@ -27,8 +27,8 @@ const Game = {
         this.canvas = document.querySelector("#canvas")
         this.ctx = this.canvas.getContext("2d")
 
-        this.width = 1478
-        this.height = 933
+        this.width = window.innerWidth
+        this.height = window.innerHeight
 
         this.canvas.width = this.width
         this.canvas.height = this.height
@@ -63,8 +63,10 @@ const Game = {
     },
 
     drawAll(){
-        this.background.draw()
+        
         this.map.blockMap.forEach(block =>  block.draw())
+        this.background.draw()
+        this.ctx.fillStyle="red"
         this.map.tunelsLower.forEach(element => element.start.draw())
         this.map.routes.forEach(element => element.start.draw())
         this.player2.draw()
@@ -215,7 +217,7 @@ const Game = {
                 this.player2.posX= tunel.redirect[0]
                 this.player2.posY= tunel.redirect[1]
             }
-        });
+        })
         this.map.tunelsLower.forEach(tunel => {
             
             if( this.player1.Down &&
@@ -229,7 +231,35 @@ const Game = {
                 this.player1.posX= tunel.redirect[0]
                 this.player1.posY= tunel.redirect[1]
             }
-        });
+        })
+        this.map.tunelUpper.forEach(tunel => {
+            
+            if( this.player2.Up &&
+                this.player2.posX < tunel.start.posXMax &&
+                this.player2.posY < tunel.start.posYMax&&
+                this.player2.posY > tunel.start.posY &&
+                this.player2.posX >  tunel.start.posX
+    
+            )
+            {
+                this.player2.posX= tunel.redirect[0]
+                this.player2.posY= tunel.redirect[1]
+            }
+        })
+        this.map.tunelUpper.forEach(tunel => {
+            
+            if( this.player1.Up &&
+                this.player1.posX < tunel.start.posXMax &&
+                this.player1.posY < tunel.start.posYMax&&
+                this.player1.posY > tunel.start.posY &&
+                this.player1.posX >  tunel.start.posX
+    
+            )
+            {
+                this.player1.posX= tunel.redirect[0]
+                this.player1.posY= tunel.redirect[1]
+            }
+        })
     }
 
 }

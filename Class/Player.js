@@ -6,8 +6,8 @@ class Player {
         this.carColor = carColor
         this.setKey= setKey
         
-        this.width= 25
-        this.height = 40
+        this.width= 40
+        this.height = 25
 
         this.posX = startPos.x
         this.posY = startPos.y
@@ -15,7 +15,7 @@ class Player {
         this.posXMax= undefined
 
         this.playerImg = new Image()
-        this.playerImg.src= carColor.up
+        this.playerImg.src= carColor.left
         this.PlayerTotalPoints= 0
 
         this.left=false                    

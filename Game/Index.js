@@ -3,13 +3,13 @@ onload = () => {
     const startGame = document.querySelector('.startGame')
     const GameScreen = document.querySelector('.GameScreen')
     const introPage = document.querySelector('.introPage')
+    introPage.classList.toggle('nonDisplay')
+    canvas.classList.toggle('nonDisplay')
+    Game.init(1, "blue", "red", 1, 2)
     
     
 
     startGame.addEventListener('click', () => {
-        introPage.classList.toggle('nonDisplay')
-        canvas.classList.toggle('nonDisplay')
-        Game.init(1, "blue", "red", 1, 2)
     })
 }
 
