@@ -38,18 +38,18 @@ class Map {
                 
             this.routes.push(
                 {
-                start:new Block(this.ctx,this.width,this.height,730,500,20,20),
-                finish:new Block(this.ctx,this.width,this.height,650,10,20,20),
+                start:new Passengers(this.ctx,this.width,this.height,730,500,20,20),
+                finish:new Destiny(this.ctx,this.width,this.height,650,10,20,20),
                 points:500
                 },
                 {
-                start:new Block(this.ctx,this.width,this.height,950,700,20,20),
-                finish:new Block(this.ctx,this.width,this.height,10,700,20,20),
+                start:new Passengers(this.ctx,this.width,this.height,950,700,20,20),
+                finish:new Destiny(this.ctx,this.width,this.height,10,700,20,20),
                 points:500
                 },
                 {
-                start:new Block(this.ctx,this.width,this.height,100,900,20,20),
-                finish:new Block(this.ctx,this.width,this.height,250,10,20,20),
+                start:new Passengers(this.ctx,this.width,this.height,100,900,20,20),
+                finish:new Destiny(this.ctx,this.width,this.height,250,10,20,20),
                 points:500
                 },
               
