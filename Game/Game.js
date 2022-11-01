@@ -63,8 +63,8 @@ const Game = {
     },
 
     drawAll(){
-        this.map.blockMap.forEach(block =>  block.draw())
         this.background.draw()
+        this.map.blockMap.forEach(block =>  block.draw())
         this.map.tunelsLower.forEach(element => element.start.draw())
         this.map.routes.forEach(element => element.start.draw())
         this.player2.draw()

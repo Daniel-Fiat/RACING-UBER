@@ -113,9 +113,9 @@ class Player {
 
     move(){
         
-        if(this.posX-10 > 0 && this.left) this.posX -=3 
-        if (this.posX+70 < this.ctxWidth && this.Right) this.posX +=3
-        if(this.posY > 0 && this.Up===true) this.posY -=3 
+        if(this.left) this.posX -=3 
+        if(this.ctxWidth && this.Right) this.posX +=3
+        if(this.Up===true) this.posY -=3 
         if(this.Down===true) this.posY +=3
        
     }

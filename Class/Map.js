@@ -39,7 +39,12 @@ class Map {
                 new Block(this.ctx,this.width,this.height,1218,225,186,130),
                 new Block(this.ctx,this.width,this.height,1218,401,186,189),
                 new Block(this.ctx,this.width,this.height,1218,637,125,187),
-                new Block(this.ctx,this.width,this.height,1395,637,65,240)
+                new Block(this.ctx,this.width,this.height,1395,637,65,240),
+
+                new Block(this.ctx,this.width,this.height,0,0,5,240),
+                new Block(this.ctx,this.width,this.height,0,925,710,.1),
+                new Block(this.ctx,this.width,this.height,1395,637,65,240),
+                new Block(this.ctx,this.width,this.height,1395,637,65,240),
                 )
                 
             this.routes.push(
@@ -62,7 +67,7 @@ class Map {
             )
             this.tunelsLower.push(
                 {
-                    start : new LowerTunnel(this.ctx,this.width,this.height,710,910,40,5),
+                    start : new LowerTunnel(this.ctx,this.width,this.height,710,950,40,5),
                     redirect : [655,0]
                 }
             )
