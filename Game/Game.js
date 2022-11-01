@@ -63,14 +63,16 @@ const Game = {
     },
 
     drawAll(){
+        this.background.draw()
+        this.map.tunelsLower.forEach(
+            element => element.start.draw()
+        )
         this.map.blockMap.forEach(block => {
             block.draw()
         });
-        this.background.draw()
         this.map.routes.forEach(
             element => element.start.draw()
         )
-
         this.player2.draw()
         this.player1.draw()
         
@@ -204,6 +206,20 @@ const Game = {
         
 
         }
+        this.map.tunelsLower.forEach(tunel => {
+            
+            if( 
+                this.player2.posX < tunel.start.posXMax &&
+                this.player2.posY < tunel.start.posYMax&&
+                this.player2.posY > tunel.start.posY - this.player2.height &&
+                this.player2.posX >  tunel.start.posX
+    
+            )
+            {
+                this.player2.posX= tunel.redirect[0]
+                this.player2.posY= tunel.redirect[1]
+            }
+        });
     }
 
 }

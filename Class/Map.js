@@ -3,9 +3,15 @@ class Map {
         this.ctx = ctx
         this.ctxWidth = ctxWidth
         this.ctxHeight = ctxHeight
+        this.numMap = numMap
+
         this.blockMap = []
         this.routes=[]
-        this.numMap = numMap
+        this.tunelsLeft= []
+        this.tunelRigth=[]
+        this.tunelsLower=[]
+        this.tunelUpper=[]
+        
         this.setMap()
   }
    setMap(){
@@ -40,12 +46,12 @@ class Map {
                 {
                 start:new Passengers(this.ctx,this.width,this.height,730,500,20,20),
                 finish:new Destiny(this.ctx,this.width,this.height,650,10,20,20),
-                points:500
+                points:250
                 },
                 {
                 start:new Passengers(this.ctx,this.width,this.height,950,700,20,20),
                 finish:new Destiny(this.ctx,this.width,this.height,10,700,20,20),
-                points:500
+                points:380
                 },
                 {
                 start:new Passengers(this.ctx,this.width,this.height,100,900,20,20),
@@ -53,6 +59,12 @@ class Map {
                 points:500
                 },
               
+            )
+            this.tunelsLower.push(
+                {
+                    start : new LowerTunnel(this.ctx,this.width,this.height,10,10,15,15),
+                    redirect : [100,500]
+                }
             )
              break;
     
