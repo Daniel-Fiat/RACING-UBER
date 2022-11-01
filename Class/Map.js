@@ -62,7 +62,7 @@ class Map {
             )
             this.tunelsLower.push(
                 {
-                    start : new LowerTunnel(this.ctx,this.width,this.height,10,10,15,15),
+                    start : new LowerTunnel(this.ctx,this.width,this.height,100,250,15,15),
                     redirect : [100,500]
                 }
             )
