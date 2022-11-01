@@ -54,6 +54,7 @@ class Player {
 
    setEventListeners(){
         document.addEventListener('keydown', (e) =>{
+            console.log(e.code)
         switch (e.code) {
                 case this.leftKey:
                     this.width = 40
@@ -149,7 +150,7 @@ class Player {
                 this.rightKey= "ArrowRight"
                 this.downKey= "ArrowDown"
                 this.upKey= "ArrowUp"
-                this.stopKey = "Numpad0"
+                this.stopKey = "ControlRight"
 
                 break;
         
