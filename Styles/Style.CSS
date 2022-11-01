@@ -9,12 +9,12 @@
 
 body {
     margin: 0;
-}
-
-.introPage {
     background: url(/Img/backgroundImage.png);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.introPage {
 }
 
 .main img {
