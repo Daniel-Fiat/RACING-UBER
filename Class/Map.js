@@ -62,8 +62,26 @@ class Map {
             )
             this.tunelsLower.push(
                 {
+                    start : new LowerTunnel(this.ctx,this.width,this.height,30,250,15,15),
+                    redirect : [100,500]
+                }
+            )
+            this.tunelUpper.push(
+                {
                     start : new LowerTunnel(this.ctx,this.width,this.height,100,250,15,15),
                     redirect : [100,500]
+                }
+            )
+            this.tunelRigth.push(
+                {
+                    start : new LowerTunnel(this.ctx,this.width,this.height,100,250,15,15),
+                    redirect : [100,500]
+                }
+            )
+            this.tunelsLeft.push(
+                {
+                    start : new LowerTunnel(this.ctx,this.width,this.height,10,50,15,15),
+                    redirect : [500,100]
                 }
             )
              break;
