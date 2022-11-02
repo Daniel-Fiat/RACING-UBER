@@ -1,13 +1,13 @@
 class Player {
- constructor(ctx, ctxWidth, ctxHeight,carColor,setKey,startPos) {
+ constructor(ctx, ctxWidth, ctxHeight,carColor,setKey,startPos,missionImg) {
         this.ctx = ctx
         this.ctxWidth = ctxWidth
         this.ctxHeight = ctxHeight
         this.carColor = carColor
         this.setKey= setKey
         
-        this.width= 25
-        this.height = 40
+        this.width= 40
+        this.height = 25
 
         this.posX = startPos.x
         this.posY = startPos.y
@@ -15,7 +15,7 @@ class Player {
         this.posXMax= undefined
 
         this.playerImg = new Image()
-        this.playerImg.src= carColor.up
+        this.playerImg.src= carColor.left
         this.PlayerTotalPoints= 0
 
         this.left=false                    
@@ -33,6 +33,7 @@ class Player {
 
         this.mission= undefined
         this.missionPoints = undefined
+        this.missionImg= missionImg
 
         
         
@@ -45,7 +46,7 @@ class Player {
        this.move() 
        this.position()
       
-       if (this.mission){this.mission.draw()}
+       if (this.mission){this.mission.draw(this.missionImg)}
        
     
       
@@ -113,10 +114,10 @@ class Player {
 
     move(){
         
-        if(this.left) this.posX -=3 
-        if(this.ctxWidth && this.Right) this.posX +=3
-        if(this.Up===true) this.posY -=3 
-        if(this.Down===true) this.posY +=3
+        if(this.left) this.posX -=4
+        if(this.ctxWidth && this.Right) this.posX +=4
+        if(this.Up===true) this.posY -=4
+        if(this.Down===true) this.posY +=4
        
     }
     

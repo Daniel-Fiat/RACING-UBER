@@ -15,8 +15,8 @@ const Game = {
     Player2Color: undefined,
     Player1SetKey:undefined,
     Player2SetKey:undefined,
-    startPos1: {x:725,y:900},
-    startPos2: {x:950,y:900},
+    startPos1: {x:860,y:700},
+    startPos2: {x:1500,y:420},
 
     Car1Color: undefined,
     Car2Color:undefined,
@@ -27,8 +27,8 @@ const Game = {
         this.canvas = document.querySelector("#canvas")
         this.ctx = this.canvas.getContext("2d")
 
-        this.width = 1478
-        this.height = 933
+        this.width = window.innerWidth
+        this.height = window.innerHeight
 
         this.canvas.width = this.width
         this.canvas.height = this.height
@@ -45,8 +45,9 @@ const Game = {
     start() {        
         this.generateAll()
         
-        this.intervalID = setInterval(() => {           
-            
+        this.intervalID = setInterval(() => {  
+
+            this.clearAll()
             this.drawAll()
             this.checkCollisions()
 
@@ -57,21 +58,27 @@ const Game = {
     generateAll(){
         this.setColorCar()
         this.background= new background (this.ctx, this.width, this.height)
-        this.player1= new Player (this.ctx, this.width, this.height,this.Car1Color,this.Player1SetKey,this.startPos1)
-        this.player2= new Player (this.ctx, this.width, this.height,this.Car2Color,this.Player2SetKey,this.startPos2)
+        this.player1= new Player (this.ctx, this.width, this.height,this.Car1Color,this.Player1SetKey,this.startPos1,"../Img/acquaMarine.png")
+        this.player2= new Player (this.ctx, this.width, this.height,this.Car2Color,this.Player2SetKey,this.startPos2,"../Img/7.png")
         this.map = new Map (this.ctx, this.width, this.height,this.map)
     },
 
     drawAll(){
-        this.background.draw()
+        
         this.map.blockMap.forEach(block =>  block.draw())
         this.map.tunelsLower.forEach(element => element.start.draw())
+        this.map.tunelUpper.forEach(element => element.start.draw())
+        this.map.tunelRigth.forEach(element => element.start.draw())
+        this.map.tunelsLeft.forEach(element => element.start.draw())
+        this.background.draw()
         this.map.routes.forEach(element => element.start.draw())
         this.player2.draw()
         this.player1.draw()
-        
-       
 
+    },
+
+    clearAll() {
+        this.ctx.clearRect(0, 0, this.width, this.height)
     },
 
     setColorCar(){
@@ -215,7 +222,7 @@ const Game = {
                 this.player2.posX= tunel.redirect[0]
                 this.player2.posY= tunel.redirect[1]
             }
-        });
+        })
         this.map.tunelsLower.forEach(tunel => {
             
             if( this.player1.Down &&
@@ -229,7 +236,91 @@ const Game = {
                 this.player1.posX= tunel.redirect[0]
                 this.player1.posY= tunel.redirect[1]
             }
-        });
+        })
+        this.map.tunelUpper.forEach(tunel => {
+            
+            if( this.player2.Up &&
+                this.player2.posX < tunel.start.posXMax &&
+                this.player2.posY < tunel.start.posYMax&&
+                this.player2.posY > tunel.start.posY &&
+                this.player2.posX >  tunel.start.posX
+    
+            )
+            {
+                this.player2.posX= tunel.redirect[0]
+                this.player2.posY= tunel.redirect[1]
+            }
+        })
+        this.map.tunelUpper.forEach(tunel => {
+            
+            if( this.player1.Up &&
+                this.player1.posX < tunel.start.posXMax &&
+                this.player1.posY < tunel.start.posYMax&&
+                this.player1.posY > tunel.start.posY &&
+                this.player1.posX >  tunel.start.posX
+    
+            )
+            {
+                this.player1.posX= tunel.redirect[0]
+                this.player1.posY= tunel.redirect[1]
+            }
+        })
+        this.map.tunelRigth.forEach(tunel => {
+            
+            if( this.player2.Right &&
+                this.player2.posX < tunel.start.posXMax &&
+                this.player2.posY < tunel.start.posYMax&&
+                this.player2.posY > tunel.start.posY &&
+                this.player2.posX >  tunel.start.posX
+    
+            )
+            {
+                this.player2.posX= tunel.redirect[0]
+                this.player2.posY= tunel.redirect[1]
+            }
+        })
+        this.map.tunelRigth.forEach(tunel => {
+            
+            if( this.player1.Right &&
+                this.player1.posX < tunel.start.posXMax &&
+                this.player1.posY < tunel.start.posYMax&&
+                this.player1.posY > tunel.start.posY &&
+                this.player1.posX >  tunel.start.posX
+    
+            )
+            {
+                this.player1.posX= tunel.redirect[0]
+                this.player1.posY= tunel.redirect[1]
+            }
+        })
+        this.map.tunelsLeft.forEach(tunel => {
+            
+            if( this.player2.left &&
+                this.player2.posX < tunel.start.posXMax &&
+                this.player2.posY < tunel.start.posYMax&&
+                this.player2.posY > tunel.start.posY &&
+                this.player2.posX >  tunel.start.posX
+    
+            )
+            {
+                this.player2.posX= tunel.redirect[0]
+                this.player2.posY= tunel.redirect[1]
+            }
+        })
+        this.map.tunelsLeft.forEach(tunel => {
+            
+            if( this.player1.left &&
+                this.player1.posX < tunel.start.posXMax &&
+                this.player1.posY < tunel.start.posYMax&&
+                this.player1.posY > tunel.start.posY - this.player1.width&&
+                this.player1.posX >  tunel.start.posX - this.player1.width
+    
+            )
+            {
+                this.player1.posX= tunel.redirect[0]
+                this.player1.posY= tunel.redirect[1]
+            }
+        })
     }
 
 }

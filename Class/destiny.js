@@ -12,11 +12,12 @@ class Destiny {
         this.posXMax= (this.posX + this.width)
 
         this.destinyIMG= new Image()
-        this.destinyIMG.src= "../Img/Bandera.png"
+        
     }
     
-    draw(){
-       
+    draw(img){
+        
+        this.destinyIMG.src= img
         this.ctx.drawImage(this.destinyIMG, this.posX, this.posY, this.width, this.height)
     }
 }

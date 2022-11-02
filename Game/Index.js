@@ -14,7 +14,14 @@ onload = () => {
     startGame.addEventListener('click', () => {
         introPage.classList.toggle('nonDisplay')
         canvas.classList.toggle('nonDisplay')
-        Game.init(1, "blue", "red", 1, 2)
+        //const Player1Color= ??
+        //const Player2Color= ??
+        //const player1Name = ??
+        //const player2Name= ??
+        const map = 1
+        const Player1SetKey = 1
+        const Player2SetKey = 2
+        Game.init(1, "blue", "red", Player1SetKey, Player2SetKey)
     })
 }
 

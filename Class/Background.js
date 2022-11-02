@@ -5,10 +5,12 @@ class background {
         this.height= height
 
         this.backgroundImg= new Image()
-        this.backgroundImg.src= "../Img/Mapa.png"
+        this.backgroundImg.src= "../Img/Mapa completo.png"
          
     }
     draw(){
        this.ctx.drawImage(this.backgroundImg, 0, 0, this.width, this.height)
+       
+       
     }
 }
