@@ -18,6 +18,6 @@ class Destiny {
     draw(img){
         
         this.destinyIMG.src= img
-        this.ctx.drawImage(this.destinyIMG, this.posX, this.posY, 55, 75)
+        this.ctx.drawImage(this.destinyIMG, this.posX, this.posY, 25,40 )
     }
 }
