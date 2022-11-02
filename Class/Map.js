@@ -19,32 +19,32 @@ class Map {
         case 1:
             this.blockMap.push(
                 // x , y, x, y
-                new Block(this.ctx,this.width,this.height,0,0,170,204),         //1
-                new Block(this.ctx,this.width,this.height,0,256,246,425),       //2
-                new Block(this.ctx,this.width,this.height,0,735,246,285),       //3
-                new Block(this.ctx,this.width,this.height,0,1074,549,6),        //4
-                new Block(this.ctx,this.width,this.height,230,0,243,204),       //5
-                new Block(this.ctx,this.width,this.height,306,256,243,253),     //6
-                new Block(this.ctx,this.width,this.height,306,562,243,188),     //7
-                new Block(this.ctx,this.width,this.height,306,805,243,215),     //8
-                new Block(this.ctx,this.width,this.height,530,0,322,70),        //9
-                new Block(this.ctx,this.width,this.height,530,120,100,85),      //10
-                new Block(this.ctx,this.width,this.height,607,120,245,290),     //11
-                new Block(this.ctx,this.width,this.height,607,462,245,425),     //12
-                new Block(this.ctx,this.width,this.height,607,939,245,140),     //13
-                new Block(this.ctx,this.width,this.height,908,0,400,70),        //14
-                new Block(this.ctx,this.width,this.height,908,120,245,152),     //15
-                new Block(this.ctx,this.width,this.height,908,325,245,208),     //16
-                new Block(this.ctx,this.width,this.height,908,585,245,180),     //17
-                new Block(this.ctx,this.width,this.height,908,816,245,138),     //18
-                new Block(this.ctx,this.width,this.height,908,1005,635,74),     //19
-                new Block(this.ctx,this.width,this.height,1210,0,245,205),      //20
-                new Block(this.ctx,this.width,this.height,1210,256,245,150),    //21
-                new Block(this.ctx,this.width,this.height,1210,462,245,220),    //22
-                new Block(this.ctx,this.width,this.height,1210,735,168,219),    //23
-                new Block(this.ctx,this.width,this.height,1512,0,35,408),       //24
-                new Block(this.ctx,this.width,this.height,1512,462,35,220),     //25
-                new Block(this.ctx,this.width,this.height,1435,735,111,345),    //26
+                new Block(this.ctx,this.width,this.height,0,0,120,143),        //1
+                new Block(this.ctx,this.width,this.height,0,186,173,297),       //3
+                new Block(this.ctx,this.width,this.height,0,525,173,197),       //2
+                new Block(this.ctx,this.width,this.height,0,764,390,6),        //4
+                new Block(this.ctx,this.width,this.height,164,0,172,145),       //5
+                new Block(this.ctx,this.width,this.height,220,184,169,176),     //6
+                new Block(this.ctx,this.width,this.height,220,402,169,130),     //7
+                new Block(this.ctx,this.width,this.height,220,572,169,152),     //8
+                new Block(this.ctx,this.width,this.height,380,0,223,48),        //9
+                new Block(this.ctx,this.width,this.height,380,87,222,57),      //10
+                new Block(this.ctx,this.width,this.height,435,87,168,203),     //11
+                new Block(this.ctx,this.width,this.height,435,330,168,298),     //12
+                new Block(this.ctx,this.width,this.height,435,669,168,99),     //13
+                new Block(this.ctx,this.width,this.height,650,0,380,48),        //14
+                new Block(this.ctx,this.width,this.height,650,87,169,105),     //15
+                new Block(this.ctx,this.width,this.height,650,233,169,144),     //16
+                new Block(this.ctx,this.width,this.height,650,418,169,123),     //17
+                new Block(this.ctx,this.width,this.height,650,583,169,94),     //18
+                new Block(this.ctx,this.width,this.height,650,717,450,74),     //19
+                new Block(this.ctx,this.width,this.height,864,0,169,142),      //20
+                new Block(this.ctx,this.width,this.height,864,185,169,104),    //21
+                new Block(this.ctx,this.width,this.height,864,330,169,152),    //22
+                new Block(this.ctx,this.width,this.height,864,525,115,150),    //23
+                new Block(this.ctx,this.width,this.height,1077,0,23,290),       //24
+                new Block(this.ctx,this.width,this.height,1077,330,23,153),     //25
+                new Block(this.ctx,this.width,this.height,1025,525,76,345),    //26
 
                 )
                 
@@ -88,15 +88,15 @@ class Map {
                     redirect : [557,1085]
                 },
                 {
-                    start : new Block(this.ctx,this.width,this.height,468,-60,70,21),
+                    start : new Block(this.ctx,this.width,this.height,100,60,70,21),
                     redirect : [557,1085]
                 },
                 {
-                    start : new Block(this.ctx,this.width,this.height,845,-60,70,21),
+                    start : new Block(this.ctx,this.width,this.height,845,60,70,21),
                     redirect : [860,1085]
                 },
                 {
-                    start : new Block(this.ctx,this.width,this.height,1450,-60,70,21),
+                    start : new Block(this.ctx,this.width,this.height,1450,60,70,21),
                     redirect : [860,1085]
                 },
             )

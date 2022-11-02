@@ -9,7 +9,7 @@
 
 body {
     margin: 0;
-    background: url(/Img/backgroundImage.png);
+    background: url(/); /*poner url de nuevo fondo LARISA*/
     background-repeat: no-repeat;
     background-size: cover;
 }
