@@ -51,18 +51,18 @@ class Map {
             this.routes.push(
                 {
                 start:new Passengers(this.ctx,this.width,this.height,250,600,20,15),
-                finish:new Destiny(this.ctx,this.width,this.height,490,10,35,35),
+                finish:new Destiny(this.ctx,this.width,this.height,490,10,100,100),
                 points:250
                 },
                 {
                 start:new Passengers(this.ctx,this.width,this.height,880,600,20,15),
-                finish:new Destiny(this.ctx,this.width,this.height,1460,10,35,35),
+                finish:new Destiny(this.ctx,this.width,this.height,1460,10,100,100),
                 points:300
                 },
                 {
                 //start:new Passengers(this.ctx,this.width,this.height,860,700,20,20),
                 start:new Passengers(this.ctx,this.width,this.height,100,200,20,15),
-                finish:new Destiny(this.ctx,this.width,this.height,600,300,35,35),
+                finish:new Destiny(this.ctx,this.width,this.height,600,300,100,100),
                 points:500
                 },
                

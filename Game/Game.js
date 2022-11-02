@@ -22,7 +22,7 @@ const Game = {
     Car2Color:undefined,
    
     map:undefined,
-    timer: 60,
+    timer: 2,
     timerToPrint: undefined,
 
     init(map,Player1Color,Player2Color,Player1SetKey,Player2SetKey ) {
@@ -66,8 +66,8 @@ const Game = {
     generateAll(){
         this.setColorCar()
         this.background= new background (this.ctx, this.width, this.height)
-        this.player1= new Player (this.ctx, this.width, this.height,this.Car1Color,this.Player1SetKey,this.startPos1,"../Img/acquaMarine.png")
-        this.player2= new Player (this.ctx, this.width, this.height,this.Car2Color,this.Player2SetKey,this.startPos2,"../Img/7.png")
+        this.player1= new Player (this.ctx, this.width, this.height,this.Car1Color,this.Player1SetKey,this.startPos1,"../Img/Puntero-rojo.png")
+        this.player2= new Player (this.ctx, this.width, this.height,this.Car2Color,this.Player2SetKey,this.startPos2,"../Img/Puntero-azul.png")
         this.map = new Map (this.ctx, this.width, this.height,this.map)
     },
 
@@ -336,9 +336,24 @@ const Game = {
         if (this.timer<0){
                 clearInterval(this.intervalID)
                 this.clearAll()
-                if(this.player1.PlayerTotalPoints>this.player2.PlayerTotalPoints)console.log("Jugador1")
-                if(this.player1.PlayerTotalPoints<this.player2.PlayerTotalPoints)console.log("Jugador2")
-                if(this.player1.PlayerTotalPoints===this.player2.PlayerTotalPoints)console.log("Empate")
+                if(this.player1.PlayerTotalPoints>this.player2.PlayerTotalPoints){
+                    this.canvas = document.querySelector("#canvas")
+                    this.ctx = this.canvas.getContext("2d")
+                    this.Win= new Image()
+                    this.Win.src= "../Img/Mapa completo.png"
+                    this.ctx.drawImage(this.Win, 0, 0, this.width, this.height)
+                }
+                if(this.player1.PlayerTotalPoints<this.player2.PlayerTotalPoints){
+                   this.ctx.font = '500px Arial';
+                    this.ctx.fillText('Ganador Player 2', 100, 550);
+                }
+                if(this.player1.PlayerTotalPoints===this.player2.PlayerTotalPoints){
+                    this.canvas = document.querySelector("#canvas")
+                    this.ctx = this.canvas.getContext("2d")
+                    this.Win= new Image()
+                    this.Win.src= "../Img"
+                    this.ctx.drawImage(this.Win, 0, 0, 600, 600)
+                }
             }
     }
 
