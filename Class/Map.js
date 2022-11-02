@@ -72,57 +72,57 @@ class Map {
 
             this.tunelsLower.push(
                 {
-                    start : new Block(this.ctx,this.width,this.height,845,1078,70,20),
-                    redirect : [870,-15]
+                    start : new Block(this.ctx,this.width,this.height,380,770,70,20),
+                    redirect : [344,-15]
                    
                 },
                 {
-                    start : new Block(this.ctx,this.width,this.height,545,1078,70,20),
-                    redirect : [500,-15]
+                    start : new Block(this.ctx,this.width,this.height,590,770,70,20),
+                    redirect : [620,-15]
                 }
             )
 
             this.tunelUpper.push(
                 {
-                    start : new Block(this.ctx,this.width,this.height,160,-60,70,21),
-                    redirect : [557,1085]
+                    start : new Block(this.ctx,this.width,this.height,110,-60,70,21),
+                    redirect : [400,770]
                 },
                 {
-                    start : new Block(this.ctx,this.width,this.height,100,60,70,21),
-                    redirect : [557,1085]
+                    start : new Block(this.ctx,this.width,this.height,320,-60,70,21),
+                    redirect : [400,770]
                 },
                 {
-                    start : new Block(this.ctx,this.width,this.height,845,60,70,21),
-                    redirect : [860,1085]
+                    start : new Block(this.ctx,this.width,this.height,590,-60,70,21),
+                    redirect : [615,770]
                 },
                 {
-                    start : new Block(this.ctx,this.width,this.height,1450,60,70,21),
-                    redirect : [860,1085]
+                    start : new Block(this.ctx,this.width,this.height,1020,-60,70,21),
+                    redirect : [615,770]
                 },
             )
 
             this.tunelRigth.push(
                 {
-                    start : new Block(this.ctx,this.width,this.height,1520,400,21,70),
-                    redirect : [-15,220]
+                    start : new Block(this.ctx,this.width,this.height,1080,275,21,70),
+                    redirect : [-15,150]
                 },
                 {
-                    start : new Block(this.ctx,this.width,this.height,1520,670,21,70),
-                    redirect : [-15,700]
+                    start : new Block(this.ctx,this.width,this.height,1080,470,21,70),
+                    redirect : [-15,490]
                 }
             )
             this.tunelsLeft.push(
                 {
-                    start : new Block(this.ctx,this.width,this.height,-60,197,21,70),
-                    redirect : [1530,420]
+                    start : new Block(this.ctx,this.width,this.height,-60,136,21,70),
+                    redirect : [1100,290]
                 },
                 {
-                    start : new Block(this.ctx,this.width,this.height,-60,675,21,70),
-                    redirect : [1530,690]
+                    start : new Block(this.ctx,this.width,this.height,-60,475,21,70),
+                    redirect : [1100,490]
                 },
                 {
-                    start : new Block(this.ctx,this.width,this.height,-60,1010,21,70),
-                    redirect : [1530,690]
+                    start : new Block(this.ctx,this.width,this.height,-60,700,21,70),
+                    redirect : [1100,490]
                 }
             )
              break;

@@ -15,8 +15,8 @@ const Game = {
     Player2Color: undefined,
     Player1SetKey:undefined,
     Player2SetKey:undefined,
-    startPos1: {x:0,y:0},
-    startPos2: {x:1500,y:420},
+    startPos1: {x:1050,y:490},
+    startPos2: {x:610,y:370},
 
     Car1Color: undefined,
     Car2Color:undefined,
@@ -65,12 +65,14 @@ const Game = {
 
     drawAll(){
         
+        this.ctx.fillStyle = "red"
         this.map.blockMap.forEach(block =>  block.draw())
-        this.background.draw()
         this.map.tunelsLower.forEach(element => element.start.draw())
         this.map.tunelUpper.forEach(element => element.start.draw())
         this.map.tunelRigth.forEach(element => element.start.draw())
         this.map.tunelsLeft.forEach(element => element.start.draw())
+        
+        //this.background.draw()
         this.map.routes.forEach(element => element.start.draw())
         this.player2.draw()
         this.player1.draw()
