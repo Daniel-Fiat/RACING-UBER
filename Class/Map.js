@@ -55,10 +55,15 @@ class Map {
                 points:250
                 },
                 {
-                //start:new Passengers(this.ctx,this.width,this.height,860,700,20,20),
                 start:new Passengers(this.ctx,this.width,this.height,880,600,20,15),
                 finish:new Destiny(this.ctx,this.width,this.height,1460,10,35,35),
                 points:300
+                },
+                {
+                //start:new Passengers(this.ctx,this.width,this.height,860,700,20,20),
+                start:new Passengers(this.ctx,this.width,this.height,100,200,20,15),
+                finish:new Destiny(this.ctx,this.width,this.height,600,300,35,35),
+                points:500
                 },
                
                

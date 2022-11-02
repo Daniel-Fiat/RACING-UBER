@@ -1,5 +1,5 @@
 onload = () => {
-    //Game.init(1, "blue", "red", 1, 2)// (map,player1color,player2color,playerkey,playerkey)
+   //(map,player1color,player2color,playerkey,playerkey)
     const startGame = document.querySelector('.startGame')
     const GameScreen = document.querySelector('.GameScreen')
     const introPage = document.querySelector('.introPage')
@@ -16,7 +16,7 @@ onload = () => {
         const map= 1
         const Player1SetKey=1
         const Player2SetKey=2
-        Game.init(1,"blue", "red", Player1SetKey, Player2SetKey)
+        Game.init(map,"blue", "red", Player1SetKey, Player2SetKey)
     })
 }
 

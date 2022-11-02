@@ -15,7 +15,7 @@ const Game = {
     Player2Color: undefined,
     Player1SetKey:undefined,
     Player2SetKey:undefined,
-    startPos1: {x:860,y:700},
+    startPos1: {x:0,y:0},
     startPos2: {x:1500,y:420},
 
     Car1Color: undefined,
