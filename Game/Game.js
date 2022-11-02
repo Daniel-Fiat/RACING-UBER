@@ -22,6 +22,8 @@ const Game = {
     Car2Color:undefined,
    
     map:undefined,
+    timer: 60,
+    timerToPrint: undefined,
 
     init(map,Player1Color,Player2Color,Player1SetKey,Player2SetKey ) {
         this.canvas = document.querySelector("#canvas")
@@ -50,6 +52,12 @@ const Game = {
             this.clearAll()
             this.drawAll()
             this.checkCollisions()
+            this.gameOVer()
+
+            this.timer= this.timer-(1/60)
+            this.timerToPrint = Number.parseInt(this.timer)
+            console.log(this.timerToPrint)
+            
 
         }, 1000 / this.FPS);
 
@@ -323,6 +331,15 @@ const Game = {
                 this.player1.posY= tunel.redirect[1]
             }
         })
+    },
+    gameOVer(){
+        if (this.timer<0){
+                clearInterval(this.intervalID)
+                this.clearAll()
+                if(this.player1.PlayerTotalPoints>this.player2.PlayerTotalPoints)console.log("Jugador1")
+                if(this.player1.PlayerTotalPoints<this.player2.PlayerTotalPoints)console.log("Jugador2")
+                if(this.player1.PlayerTotalPoints===this.player2.PlayerTotalPoints)console.log("Empate")
+            }
     }
 
 }
