@@ -45,8 +45,9 @@ const Game = {
     start() {        
         this.generateAll()
         
-        this.intervalID = setInterval(() => {           
-            
+        this.intervalID = setInterval(() => {  
+
+            this.clearAll()
             this.drawAll()
             this.checkCollisions()
 
@@ -73,9 +74,11 @@ const Game = {
         this.map.routes.forEach(element => element.start.draw())
         this.player2.draw()
         this.player1.draw()
-        
-       
 
+    },
+
+    clearAll() {
+        this.ctx.clearRect(0, 0, this.width, this.height)
     },
 
     setColorCar(){
