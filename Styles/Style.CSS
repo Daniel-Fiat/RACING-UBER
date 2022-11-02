@@ -9,12 +9,12 @@
 
 body {
     margin: 0;
-    background: url(/); /*poner url de nuevo fondo LARISA*/
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .introPage {
+    background: url(/Img/new3background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .main img {
@@ -24,20 +24,23 @@ body {
 }
 
 .main h1 {
-    color: #fff;
+    color: #000;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 53px;
     padding-left: 50px;
     padding-right: 50px;
+    padding-bottom: 20px;
     text-align: center;
     font-size: 30px;
 }
 
 .playerInfo {
-    max-width: 200px;
-    margin: 12px auto;
-    padding: 2em 3em 2em 3em;
-    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 450px;
+    max-width: 350px;
+    color: #000;
 
 }
 
@@ -47,8 +50,7 @@ label {
 }
 
 input[type=text] {
-    width: 100%;
-    padding: 5px;
+    width: 70%;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -106,6 +108,7 @@ input[type=radio] {
     background-color: #f2f2f2;
     padding: 20px;
     color: #000;
+    margin-bottom: 60px;
 }
 
 .instructions img {
@@ -120,6 +123,7 @@ input[type=radio] {
     background-color: #f2f2f2;
     padding: 20px;
     color: #000;
+    margin-bottom: 60px;
 }
 
 .rules h2 {

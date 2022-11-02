@@ -15,24 +15,38 @@
         <main class="main">
             <h1><img src="./Img/ironhackGame-logo.png" alt="logo">WELCOME TO RACING UBER!!</h1>
             <div class="playerInfo">
-                <h2>Player's names:</h2>
-                <label for="player1">Player One:</label><br>
-                <input type="text" id="player1" value="playerOne"><br>
-                <label for="player2">Player Two:</label><br>
-                <input type="text" id="player2" value="playerTwo"><br><br>
-                <h2>Choose your Color:</h2>
-                <label for="cars1">Player One:</label>
-                <input type="radio" name="playerOne" id="carBlue" value="blue" checked><img src="" alt="car blue"> <!--poner src de imagenes-->
-                <input type="radio" name="playerOne" id="carRed" value="red"><img src="" alt="car red"> <!--poner src de imagenes-->
-                <input type="radio" name="playerOne" id="carWhite" value="white"><img src="" alt="car white"> <!--poner src de imagenes-->
-                <input type="radio" name="playerOne" id="carGreen" value="green"><img src="" alt="car green"> <!--poner src de imagenes-->
-                <input type="radio" name="playerOne" id="carOrange" value="orange"><img src="" alt="car orange"> <!--poner src de imagenes-->
-                <label for="cars2">Player Two:</label>
-                <input type="radio" name="playerTwo" id="carBlue" value="blue" checked><img src="./Img/blue-up.png" alt="car blue"><!--src imagenes-->
-                <input type="radio" name="playerTwo" id="carRed" value="red"><img src="" alt="car red"><!--src imagenes-->
-                <input type="radio" name="playerTwo" id="carWhite" value="white"><img src="" alt="car white"><!--src imagenes-->
-                <input type="radio" name="playerTwo" id="carGreen" value="green"><img src="" alt="car green"><!--src imagenes-->
-                <input type="radio" name="playerTwo" id="carOrange" value="orange"><img src="" alt="car orange"><!--src imagenes-->
+                <div class="playerInfoNames">
+                    <h2>Player's names:</h2>
+                    <label for="player1">Player One:</label><br>
+                    <input type="text" id="player1" value="playerOne"><br>
+                    <label for="player2">Player Two:</label><br>
+                    <input type="text" id="player2" value="playerTwo"><br><br>
+                </div>
+                <div class="playerInfoColors">
+                    <h2>Choose your Color:</h2>
+                    <label for="cars1">Player One:</label>
+                    <input type="radio" name="playerOne" id="carBlue" value="blue" checked><img src="/Img/blue-up.png"
+                        alt="car blue">
+                    <input type="radio" name="playerOne" id="carRed" value="red"><img src="/Img/red-Up.png"
+                        alt="car red">
+                    <input type="radio" name="playerOne" id="carWhite" value="white"><img src="/Img/white-up.png"
+                        alt="car white">
+                    <input type="radio" name="playerOne" id="carGreen" value="green"><img src="" alt="car green">
+                    <!--METER ESTA IMG-->
+                    <input type="radio" name="playerOne" id="carOrange" value="orange"><img src="/Img/7-up.png"
+                        alt="car orange">
+                    <label for="cars2">Player Two:</label>
+                    <input type="radio" name="playerTwo" id="carBlue" value="blue" checked><img src="./Img/blue-up.png"
+                        alt="car blue">
+                    <input type="radio" name="playerTwo" id="carRed" value="red"><img src="/Img/red-Up.png"
+                        alt="car red">
+                    <input type="radio" name="playerTwo" id="carWhite" value="white"><img src="/Img/white-up.png"
+                        alt="car white">
+                    <input type="radio" name="playerTwo" id="carGreen" value="green"><img src="" alt="car green">
+                    <!--METER ESTA IMG-->
+                    <input type="radio" name="playerTwo" id="carOrange" value="orange"><img src="/Img/7-up.png"
+                        alt="car orange">
+                </div>
             </div>
         </main>
         <div class="startButton">
@@ -41,21 +55,21 @@
         <div class="container">
             <article class="instructions">
                 <h2>Instructions:</h2>
-                <img src="/Img/playerOne-instructions.png.jpg" alt="player1">
-                <img src="/Img/playerTwo-instructions.png.jpg" alt="player2">
+                <!--   <img src="/Img/playerOne-instructions.png.jpg" alt="player1"> -->
+                <!--   <img src="/Img/playerTwo-instructions.png.jpg" alt="player2"> -->
             </article>
             <article class="rules">
                 <h2>Rules:</h2>
-                <p>You are uber drivers racing to see who's the fastest, but hey!
+                <!--    <p>You are uber drivers racing to see who's the fastest, but hey!
                     you have a time limit,<br> so try your best to
                     pick up your customers and get money as fast as you can
                     before the other player! <br>When the time is up,
-                    there can only be one winner... Who is it gonna be...? <br> HAPPY RACING!</p>
+                    there can only be one winner... Who is it gonna be...? <br> HAPPY RACING!</p> -->
             </article>
         </div>
     </section>
     <section class="GameScreen">
-        <div ></div>
+        <div></div>
         <canvas id="canvas" class="nonDisplay"></canvas>
     </section>
 
