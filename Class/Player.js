@@ -55,7 +55,7 @@ class Player {
 
    setEventListeners(){
         document.addEventListener('keydown', (e) =>{
-            console.log(e.code)
+            
         switch (e.code) {
                 case this.leftKey:
                     this.width = 30
