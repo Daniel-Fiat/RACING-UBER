@@ -22,7 +22,7 @@ const Game = {
     Car2Color: undefined,
 
     map: undefined,
-    timer: 10,
+    timer: 60,
     timerToPrint: undefined,
 
     init(map, Player1Color, Player2Color, Player1SetKey, Player2SetKey) { //falta meter el input del nombre de los jugadores???
