@@ -74,7 +74,7 @@ const Game = {
 
     drawAll() {
 
-        this.ctx.fillStyle = "red"
+        this.ctx.fillStyle = "rgba(0, 0, 0, 0.2)"
         this.map.tunelsLower.forEach(element => element.start.draw())
         this.map.tunelUpper.forEach(element => element.start.draw())
         this.map.tunelRigth.forEach(element => element.start.draw())
@@ -413,12 +413,17 @@ const Game = {
         }
     },
     screenPoints(){
+        this.ctx.fillStyle = "red"
         this.ctx.font = "50px serif";
         this.ctx.fillText("Player 1 ", 1150,150)
-        this.ctx.fillText(this.player1.PlayerTotalPoints, 1150,250)
+        this.ctx.fillStyle = "green"
+        this.ctx.fillText("$ "+this.player1.PlayerTotalPoints, 1150,250)
+        this.ctx.fillStyle = "red"
         this.ctx.fillText("Player 2 ", 1150,500)
-        this.ctx.fillText(this.player2.PlayerTotalPoints, 1150,600)
-        this.ctx.fillText(Number.parseInt(this.timer), 1250,400)
+        this.ctx.fillStyle = "green"
+        this.ctx.fillText("$ "+this.player2.PlayerTotalPoints, 1150,600)
+        this.ctx.fillStyle = "white"
+        this.ctx.fillText(Number.parseInt(this.timer), 1205,400)
         
     }
 
