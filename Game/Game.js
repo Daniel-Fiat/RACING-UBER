@@ -22,7 +22,7 @@ const Game = {
     Car2Color: undefined,
 
     map: undefined,
-    timer: 30,
+    timer: 60,
     timerToPrint: undefined,
 
     init(map, Player1Color, Player2Color, Player1SetKey, Player2SetKey) { //falta meter el input del nombre de los jugadores???
@@ -55,8 +55,7 @@ const Game = {
             this.gameOVer()
 
             this.timer = this.timer - (1 / 60)
-            this.timerToPrint = Number.parseInt(this.timer)
-            console.log(this.timerToPrint)
+
 
 
         }, 1000 / this.FPS);
@@ -79,8 +78,11 @@ const Game = {
         this.map.tunelRigth.forEach(element => element.start.draw())
         this.map.tunelsLeft.forEach(element => element.start.draw())
         
-        this.background.draw()
         this.map.blockMap.forEach(block => block.draw())
+        this.background.draw()
+        this.screenPoints()
+      
+       
         this.map.routes.forEach(element => element.start.draw())
         this.player2.draw()
         this.player1.draw()
@@ -327,27 +329,34 @@ const Game = {
     this.Win = new Image()
                 this.Win.src = "../Img/gameOver-player1won.webp"
                 this.ctx.drawImage(this.Win, 350, 50, 600, 600)
+                document.addEventListener("click", e => location.reload())
             }
             if (this.player1.PlayerTotalPoints < this.player2.PlayerTotalPoints) {
             this.Win = new Image()
                 this.Win.src = "../Img/gameOver-player2won.webp"
                 this.ctx.drawImage(this.Win, 350, 50, 600, 600)
+                document.addEventListener("click", e => location.reload())
             }
             if (this.player1.PlayerTotalPoints === this.player2.PlayerTotalPoints) {
               
                 this.Win = new Image()
                 this.Win.src = "../Img/keep-calm-it-s-a-tie.png"
                 this.ctx.drawImage(this.Win, 350, 50, 600, 600)
-
-                document.addEventListener("click", e => {
-
-                   
-                    
-                    
-                } )
+                document.addEventListener("click", e => location.reload())
             }
         }
+    },
+    screenPoints(){
+        this.ctx.font = "50px serif";
+        this.ctx.fillText("Player 1 ", 1150,500)
+        this.ctx.fillText(this.player1.PlayerTotalPoints, 1150,600)
+        this.ctx.font = "50px serif";
+        this.ctx.fillText("Player 2 ", 1150,150)
+        this.ctx.fillText(this.player2.PlayerTotalPoints, 1150,250)
+        this.ctx.fillText(Number.parseInt(this.timer), 1250,400)
+        
     }
+
 
 }
 

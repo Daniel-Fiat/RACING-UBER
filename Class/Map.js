@@ -50,110 +50,94 @@ class Map {
                 
             this.routes.push(
                 {
-                start:new Passengers(this.ctx,this.width,this.height,180,600,30,30),
-                finish:new Destiny(this.ctx,this.width,this.height,490,30,100,100),
-                points:250
+                    start:new Passengers(this.ctx,this.width,this.height,180,600,30,30),
+                    finish:new Destiny(this.ctx,this.width,this.height,490,30,100,100),
+                    points:50
                 },
                 {
-                start:new Passengers(this.ctx,this.width,this.height,180,150,30,30),
-                finish:new Destiny(this.ctx,this.width,this.height,490,30,100,100),
-                points:300
+                    start:new Passengers(this.ctx,this.width,this.height,180,150,30,30),
+                    finish:new Destiny(this.ctx,this.width,this.height,830,30,100,100),
+                    points:60
                 },
                 {
-                //start:new Passengers(this.ctx,this.width,this.height,860,700,20,20),
-                start:new Passengers(this.ctx,this.width,this.height,400,300,30,30),
-                finish:new Destiny(this.ctx,this.width,this.height,490,30,100,100),
-                points:500
+                    start:new Passengers(this.ctx,this.width,this.height,400,300,30,30),
+                    finish:new Destiny(this.ctx,this.width,this.height,830,100,100,100),
+                    points:65
                 },
                 {
-                //start:new Passengers(this.ctx,this.width,this.height,860,700,20,20),
-                start:new Passengers(this.ctx,this.width,this.height,400,700,30,30),
-                finish:new Destiny(this.ctx,this.width,this.height,490,30,100,100),
-                points:500
+                    start:new Passengers(this.ctx,this.width,this.height,400,700,30,30),
+                    finish:new Destiny(this.ctx,this.width,this.height,135,30,100,100),
+                    points:50
                 },
                 {
-                //start:new Passengers(this.ctx,this.width,this.height,860,700,20,20),
-                start:new Passengers(this.ctx,this.width,this.height,400,60,30,30),
-                finish:new Destiny(this.ctx,this.width,this.height,490,30,100,100),
-                points:500
-                },
-
-                {
-                //start:new Passengers(this.ctx,this.width,this.height,860,700,20,20),
-                start:new Passengers(this.ctx,this.width,this.height,620,10,30,30),
-                finish:new Destiny(this.ctx,this.width,this.height,490,30,100,100),
-                points:500
+                    start:new Passengers(this.ctx,this.width,this.height,400,52,30,30),
+                    finish:new Destiny(this.ctx,this.width,this.height,490,610,100,100),
+                    points:60
                 },
                 {
-                //start:new Passengers(this.ctx,this.width,this.height,860,700,20,20),
-                start:new Passengers(this.ctx,this.width,this.height,620,250,30,30),
-                finish:new Destiny(this.ctx,this.width,this.height,600,300,100,100),
-                points:500
+                    start:new Passengers(this.ctx,this.width,this.height,620,10,30,30),
+                    finish:new Destiny(this.ctx,this.width,this.height,1050,30,100,100),
+                    points:40
                 },
                 {
-                //start:new Passengers(this.ctx,this.width,this.height,860,700,20,20),
-                start:new Passengers(this.ctx,this.width,this.height,620,490,30,30),
-                finish:new Destiny(this.ctx,this.width,this.height,600,300,100,100),
-                points:500
+                    start:new Passengers(this.ctx,this.width,this.height,620,250,30,30),
+                    finish:new Destiny(this.ctx,this.width,this.height,100,705,100,100),
+                    points:40
                 },
                 {
-                //start:new Passengers(this.ctx,this.width,this.height,860,700,20,20),
-                start:new Passengers(this.ctx,this.width,this.height,620,720,30,30),
-                finish:new Destiny(this.ctx,this.width,this.height,600,300,100,100),
-                points:500
+                    start:new Passengers(this.ctx,this.width,this.height,620,490,30,30),
+                    finish:new Destiny(this.ctx,this.width,this.height,100,130,100,100),
+                    points:50
+                },
+                {    
+                    start:new Passengers(this.ctx,this.width,this.height,620,720,30,30),
+                    finish:new Destiny(this.ctx,this.width,this.height,620,10,100,100),
+                    points:15
                 },
                 {
-                //start:new Passengers(this.ctx,this.width,this.height,860,700,20,20),
-                start:new Passengers(this.ctx,this.width,this.height,820,100,30,30),
-                finish:new Destiny(this.ctx,this.width,this.height,600,300,100,100),
-                points:500
+                    
+                    start:new Passengers(this.ctx,this.width,this.height,820,100,30,30),
+                    finish:new Destiny(this.ctx,this.width,this.height,185,300,100,100),
+                    points:65
                 },
                 {
-                //start:new Passengers(this.ctx,this.width,this.height,860,700,20,20),
-                start:new Passengers(this.ctx,this.width,this.height,820,300,30,30),
-                finish:new Destiny(this.ctx,this.width,this.height,600,300,100,100),
-                points:500
+                    start:new Passengers(this.ctx,this.width,this.height,820,300,30,30),
+                    finish:new Destiny(this.ctx,this.width,this.height,450,30,100,100),
+                    points:40
+                },
+                {    
+                    start:new Passengers(this.ctx,this.width,this.height,820,680,30,30),
+                    finish:new Destiny(this.ctx,this.width,this.height,190,300,100,100),
+                    points:65
                 },
                 {
-                //start:new Passengers(this.ctx,this.width,this.height,860,700,20,20),
-                start:new Passengers(this.ctx,this.width,this.height,820,680,30,30),
-                finish:new Destiny(this.ctx,this.width,this.height,600,300,100,100),
-                points:500
+                    start:new Passengers(this.ctx,this.width,this.height,1040,40,30,30),
+                    finish:new Destiny(this.ctx,this.width,this.height,1000,650,100,100),
+                    points:50
                 },
                 {
-                //start:new Passengers(this.ctx,this.width,this.height,860,700,20,20),
-                start:new Passengers(this.ctx,this.width,this.height,1040,40,30,30),
-                finish:new Destiny(this.ctx,this.width,this.height,600,300,100,100),
-                points:500
+                    start:new Passengers(this.ctx,this.width,this.height,1040,360,30,30),
+                    finish:new Destiny(this.ctx,this.width,this.height,600,100,100,100),
+                    points:60
                 },
                 {
-                //start:new Passengers(this.ctx,this.width,this.height,860,700,20,20),
-                start:new Passengers(this.ctx,this.width,this.height,1040,360,30,30),
-                finish:new Destiny(this.ctx,this.width,this.height,600,300,100,100),
-                points:500
+                    start:new Passengers(this.ctx,this.width,this.height,290,370,30,30),
+                    finish:new Destiny(this.ctx,this.width,this.height,620,100,100,100),
+                    points:55
+                },
+                {    
+                    start:new Passengers(this.ctx,this.width,this.height,0,150,30,30),
+                    finish:new Destiny(this.ctx,this.width,this.height,600,300,100,100),
+                    points:55
+                },
+                {    
+                    start:new Passengers(this.ctx,this.width,this.height,0,490,30,30),
+                    finish:new Destiny(this.ctx,this.width,this.height,400,35,100,100),
+                    points:65
                 },
                 {
-                //start:new Passengers(this.ctx,this.width,this.height,860,700,20,20),
-                start:new Passengers(this.ctx,this.width,this.height,290,370,30,30),
-                finish:new Destiny(this.ctx,this.width,this.height,600,300,100,100),
-                points:500
-                },
-                {
-                //start:new Passengers(this.ctx,this.width,this.height,860,700,20,20),
-                start:new Passengers(this.ctx,this.width,this.height,0,150,30,30),
-                finish:new Destiny(this.ctx,this.width,this.height,600,300,100,100),
-                points:500
-                },
-                {
-                //start:new Passengers(this.ctx,this.width,this.height,860,700,20,20),
-                start:new Passengers(this.ctx,this.width,this.height,0,490,30,30),
-                finish:new Destiny(this.ctx,this.width,this.height,600,300,100,100),
-                points:500
-                },
-                {
-                //start:new Passengers(this.ctx,this.width,this.height,860,700,20,20),
                 start:new Passengers(this.ctx,this.width,this.height,990,600,30,30),
-                finish:new Destiny(this.ctx,this.width,this.height,600,300,100,100),
+                finish:new Destiny(this.ctx,this.width,this.height,35,480,100,100),
                 points:500
                 },
                

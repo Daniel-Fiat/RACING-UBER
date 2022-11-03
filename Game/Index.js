@@ -17,7 +17,7 @@ onload = () => {
     const royalBlue2 = document.querySelector('#carRoyalBlue2')
 
     startGame.addEventListener('click', () => {
-        SetColorCar()
+
         introPage.classList.toggle('nonDisplay')
         canvas.classList.toggle('nonDisplay')
         // let player1Color =
