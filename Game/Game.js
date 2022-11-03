@@ -314,7 +314,6 @@ const Game = {
                 this.player1.posY < tunel.start.posYMax &&
                 this.player1.posY > tunel.start.posY - this.player1.width &&
                 this.player1.posX > tunel.start.posX - this.player1.width
-
             ) {
                 this.player1.posX = tunel.redirect[0]
                 this.player1.posY = tunel.redirect[1]
