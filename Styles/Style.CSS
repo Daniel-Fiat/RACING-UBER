@@ -17,7 +17,7 @@ body {
 
 
 .main img {
-    width: 30px;
+    width: 60px;
     display: inline;
     align-items: center;
 }
@@ -30,29 +30,20 @@ body {
     padding-right: 50px;
     padding-bottom: 20px;
     text-align: center;
-    font-size: 30px;
+    font-size: 60px;
 }
 
-.playerInfo {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-left: 450px;
-    max-width: 350px;
-    color: #000;
-}
-
-label {
+.playerColors {
+    height: 100px;
     display: block;
-    margin-top: 0;
+    align-items: center;
+    margin-left: 500px;
+    margin-top: 70px;
+    text-decoration-color: bold;
 }
 
-input[type=text] {
-    width: 200px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+.player1Colors {
+    margin-bottom: 45px;
 }
 
 input[type=radio] {
@@ -91,11 +82,11 @@ input[type=radio] {
 }
 
 .container {
-    height: 20px;
-    margin-top: 90px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    height: 20px;
+    margin-top: 400px;
     color: #fff;
 
 }
@@ -105,7 +96,7 @@ input[type=radio] {
     background-color: #f2f2f2;
     padding: 20px;
     color: #000;
-    margin-bottom: 300px;
+    margin-bottom: 150px;
 }
 
 .instructions img {
@@ -119,7 +110,7 @@ input[type=radio] {
     background-color: #f2f2f2;
     padding: 20px;
     color: #000;
-    margin-bottom: 300px;
+    margin-bottom: 150px;
     text-align: center;
 }
 

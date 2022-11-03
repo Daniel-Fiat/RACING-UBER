@@ -15,64 +15,60 @@
         <main class="main">
             <h1><img src="./Img/ironhackGame-logo.png" alt="logo">WELCOME TO RACING UBER!!</h1>
             <div class="playerInfo">
-                <div class="playerInfoNames">
-                    <h2>Player's names:</h2>
-                    <label for="player1">Player One:</label><br>
-                    <input type="text" id="player1" value="playerOne"><br>
-                    <label for="player2">Player Two:</label><br>
-                    <input type="text" id="player2" value="playerTwo"><br><br>
+                <div class="playerColors">
+                    <div class="player1Colors">
+                        <h2>Choose your Color:</h2>
+                        <label for="cars1">Player One:</label>
+                        <input type="radio" name="playerOne" id="carBlue1" value="blue" checked><img
+                            src="/Img/blue-up.png" alt="car blue">
+                        <input type="radio" name="playerOne" id="carRed1" value="red"><img src="/Img/red-Up.png"
+                            alt="car red">
+                        <input type="radio" name="playerOne" id="carWhite1" value="white"><img src="/Img/white-up.png"
+                            alt="car white">
+                        <input type="radio" name="playerOne" id="carGreen1" value="green"><img src="/Img/4-up.png"
+                            alt="car green">
+                        <input type="radio" name="playerOne" id="carOrange1" value="orange"><img src="/Img/7-up.png"
+                            alt="car orange">
+                        <input type="radio" name="playerOne" id="carRoyalBlue1" value="royalBlue"><img
+                            src="/Img/royalBlue-Up.png" alt="royal blue">
+                    </div>
+                    <div class="player2Colors">
+                        <label for="cars2">Player Two:</label>
+                        <input type="radio" name="playerTwo" id="carBlue1" value="blue" checked><img
+                            src="./Img/blue-up.png" alt="car blue">
+                        <input type="radio" name="playerTwo" id="carRed2" value="red"><img src="/Img/red-Up.png"
+                            alt="car red">
+                        <input type="radio" name="playerTwo" id="carWhite2" value="white"><img src="/Img/white-up.png"
+                            alt="car white">
+                        <input type="radio" name="playerTwo" id="carGreen2" value="green"><img src="/Img/4-up.png"
+                            alt="car green">
+                        <input type="radio" name="playerTwo" id="carOrange2" value="orange"><img src="/Img/7-up.png"
+                            alt="car orange">
+                        <input type="radio" name="playerOne" id="carRoyalBlue2" value="royalBlue"><img
+                            src="/Img/royalBlue-Up.png" alt="royal blue">
+                    </div>
                 </div>
-                <div class="playerInfoColors">
-                    <h2>Choose your Color:</h2>
-                    <label for="cars1">Player One:</label>
-                    <input type="radio" name="playerOne" id="carBlue" value="blue" checked><img src="/Img/blue-up.png"
-                        alt="car blue">
-                    <input type="radio" name="playerOne" id="carRed" value="red"><img src="/Img/red-Up.png"
-                        alt="car red">
-                    <input type="radio" name="playerOne" id="carWhite" value="white"><img src="/Img/white-up.png"
-                        alt="car white">
-                    <input type="radio" name="playerOne" id="carGreen" value="green"><img src="/Img/4-up.png"
-                        alt="car green">
-                    <input type="radio" name="playerOne" id="carOrange" value="orange"><img src="/Img/7-up.png"
-                        alt="car orange">
-                    <input type="radio" name="playerOne" id="royalBlue" value="royalBlue"><img
-                        src="/Img/royalBlue-Up.png" alt="royal blue">
-                    <label for="cars2">Player Two:</label>
-                    <input type="radio" name="playerTwo" id="carBlue" value="blue" checked><img src="./Img/blue-up.png"
-                        alt="car blue">
-                    <input type="radio" name="playerTwo" id="carRed" value="red"><img src="/Img/red-Up.png"
-                        alt="car red">
-                    <input type="radio" name="playerTwo" id="carWhite" value="white"><img src="/Img/white-up.png"
-                        alt="car white">
-                    <input type="radio" name="playerTwo" id="carGreen" value="green"><img src="/Img/4-up.png"
-                        alt="car green">
-                    <input type="radio" name="playerTwo" id="carOrange" value="orange"><img src="/Img/7-up.png"
-                        alt="car orange">
-                    <input type="radio" name="playerOne" id="royalBlue" value="royalBlue"><img
-                        src="/Img/royalBlue-Up.png" alt="royal blue">
-                </div>
-            </div>
+        </main>
+        <div class="container">
+            <article class="instructions">
+                <h2>Instructions:</h2>
+                <img src="/Img/playerOne-instructions.png.jpg" alt="player1">
+                <img src="/Img/playerTwo-instructions.png.jpg" alt="player2">
+            </article>
             <div class="startButton">
                 <button class="startGame" type="button">Start Game!</button>
             </div>
-            <div class="container">
-                <article class="instructions">
-                    <h2>Instructions:</h2>
-                    <img src="/Img/playerOne-instructions.png.jpg" alt="player1">
-                    <img src="/Img/playerTwo-instructions.png.jpg" alt="player2">
-                </article>
-                <article class="rules">
-                    <h2>Rules:</h2>
-                    <p>You are uber drivers racing to see who's the fastest, but hey!<br>
-                        you have a time limit, so try your best to<br>
-                        pick up your customers and get money as fast as you can<br>
-                        before the other player! When the time is up,<br>
-                        there can only be one winner... Who is it gonna be...? <br>
-                        HAPPY RACING!</p>
-                </article>
-            </div>
-        </section>
-    </main>
+            <article class="rules">
+                <h2>Rules:</h2>
+                <p>You are uber drivers racing to see who's the fastest, but hey!<br>
+                    you have a time limit, so try your best to<br>
+                    pick up your customers and get money as fast as you can<br>
+                    before the other player! When the time is up,<br>
+                    there can only be one winner... Who is it gonna be...? <br>
+                    HAPPY RACING!</p>
+            </article>
+        </div>
+    </section>
     <section class="GameScreen">
         <section class="canvasPanel">
             <img src="/Img/gameOver-player1won.webp" class="nonDisplay" alt="player2">
