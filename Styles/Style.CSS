@@ -9,13 +9,12 @@
 
 body {
     margin: 0;
-}
-
-.introPage {
     background: url(/Img/new3background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
 
 .main img {
     width: 30px;

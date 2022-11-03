@@ -22,7 +22,7 @@ const Game = {
     Car2Color: undefined,
 
     map: undefined,
-    timer: 2,
+    timer: 30,
     timerToPrint: undefined,
 
     init(map, Player1Color, Player2Color, Player1SetKey, Player2SetKey) { //falta meter el input del nombre de los jugadores???
@@ -74,13 +74,13 @@ const Game = {
     drawAll() {
 
         this.ctx.fillStyle = "red"
-        this.map.blockMap.forEach(block => block.draw())
         this.map.tunelsLower.forEach(element => element.start.draw())
         this.map.tunelUpper.forEach(element => element.start.draw())
         this.map.tunelRigth.forEach(element => element.start.draw())
         this.map.tunelsLeft.forEach(element => element.start.draw())
-
+        
         this.background.draw()
+        this.map.blockMap.forEach(block => block.draw())
         this.map.routes.forEach(element => element.start.draw())
         this.player2.draw()
         this.player1.draw()
@@ -324,22 +324,27 @@ const Game = {
             clearInterval(this.intervalID)
             this.clearAll()
             if (this.player1.PlayerTotalPoints > this.player2.PlayerTotalPoints) {
-                this.canvas = document.querySelector("#canvas")
-                this.ctx = this.canvas.getContext("2d")
-                this.Win = new Image()
-                this.Win.src = "../Img/Mapa completo.png"
-                this.ctx.drawImage(this.Win, 0, 0, this.width, this.height)
+    this.Win = new Image()
+                this.Win.src = "../Img/gameOver-player1won.webp"
+                this.ctx.drawImage(this.Win, 350, 50, 600, 600)
             }
             if (this.player1.PlayerTotalPoints < this.player2.PlayerTotalPoints) {
-                this.ctx.font = '500px Arial';
-                this.ctx.fillText('Ganador Player 2', 100, 550);
+            this.Win = new Image()
+                this.Win.src = "../Img/gameOver-player2won.webp"
+                this.ctx.drawImage(this.Win, 350, 50, 600, 600)
             }
             if (this.player1.PlayerTotalPoints === this.player2.PlayerTotalPoints) {
-                this.canvas = document.querySelector("#canvas")
-                this.ctx = this.canvas.getContext("2d")
+              
                 this.Win = new Image()
-                this.Win.src = "../Img"
-                this.ctx.drawImage(this.Win, 0, 0, 600, 600)
+                this.Win.src = "../Img/keep-calm-it-s-a-tie.png"
+                this.ctx.drawImage(this.Win, 350, 50, 600, 600)
+
+                document.addEventListener("click", e => {
+
+                   
+                    
+                    
+                } )
             }
         }
     }

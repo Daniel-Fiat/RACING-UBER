@@ -10,22 +10,26 @@ onload = () => {
     const white = document.querySelector('#carWhite') // input color coche
     const green = document.querySelector('#carGreen')
     const orange = document.querySelector('#carOrange')
+
     
-    introPage.classList.toggle('nonDisplay')
-    canvas.classList.toggle('nonDisplay')
-    //const Player1Color= ??
-    //const Player2Color= ??
-    //const player1Name = ??
-    //const player2Name= ??
-    const map= 1
-    const Player1SetKey=1
-    const Player2SetKey=2
-    Game.init(map,"red", "blue", Player1SetKey, Player2SetKey)
     
     
     startGame.addEventListener('click', () => {
+        SetColorCar()
+        introPage.classList.toggle('nonDisplay')
+        canvas.classList.toggle('nonDisplay')
+        //let Player1Color= ??
+        // Player2Color= ??
+    
+        const map= 1
+        const Player1SetKey=1
+        const Player2SetKey=2
+        
+
+        Game.init(map,"red", "blue", Player1SetKey, Player2SetKey)
         
     })
+
 }
 
 
