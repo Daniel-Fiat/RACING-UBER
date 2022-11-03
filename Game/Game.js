@@ -63,11 +63,13 @@ const Game = {
     },
 
     generateAll() {
+
         this.setColorCar()
         this.background = new background(this.ctx, this.width, this.height)
         this.player1 = new Player(this.ctx, this.width, this.height, this.Car1Color, this.Player1SetKey, this.startPos1, "../Img/Puntero-rojo.png")
         this.player2 = new Player(this.ctx, this.width, this.height, this.Car2Color, this.Player2SetKey, this.startPos2, "../Img/Puntero-azul.png")
         this.map = new Map(this.ctx, this.width, this.height, this.map)
+        
     },
 
     drawAll() {
@@ -112,11 +114,42 @@ const Game = {
                     up: '../Img/red-Up.png',
                 }
                 break;
+            case "white":
+                this.Car1Color = {
+                    left: '../Img/white-left.png',
+                    right: '../Img/white-right.png',
+                    down: '../Img/white-down.png',
+                    up: '../Img/white-up.png',
+                }
+                break;
+            case "green":
+                this.Car1Color = {
+                    left: '../Img/4 - left.png',
+                    right: '../Img/4-rigth.png',
+                    down: '../Img/4-down.png',
+                    up: '../Img/4-up.png',
+                }
+                break;
+            case "orange":
+                this.Car1Color = {
+                    left: '../Img/7 - left.png',
+                    right: '../Img/7 - rigth.png',
+                    down: '../Img/7 - down.png',
+                    up: '../Img/7-up.png',
+                }
+                break;
+            case "royalBlue":
+                this.Car1Color = {
+                    left: '../Img/royalBlue - left.png',
+                    right: '../Img/royalBlue -right.png',
+                    down: '../Img/royalBlue - down.png',
+                    up: '../Img/royalBlue-Up.png',
+                }
+                break;
 
             default:
                 break;
         }
-
         switch (this.Player2Color) {
             case "blue":
                 this.Car2Color = {
@@ -134,10 +167,44 @@ const Game = {
                     up: '../Img/red-Up.png',
                 }
                 break;
+            case "white":
+                this.Car2Color = {
+                    left: '../Img/white-left.png',
+                    right: '../Img/white-right.png',
+                    down: '../Img/white-down.png',
+                    up: '../Img/white-up.png',
+                }
+                break;
+            case "green":
+                this.Car2Color = {
+                    left: '../Img/4 - left.png',
+                    right: '../Img/4-rigth.png',
+                    down: '../Img/4-down.png',
+                    up: '../Img/4-up.png',
+                }
+                break;
+            case "orange":
+                this.Car2Color = {
+                    left: '../Img/7 - left.png',
+                    right: '../Img/7 - rigth.png',
+                    down: '../Img/7 - down.png',
+                    up: '../Img/7-up.png',
+                }
+                break;
+            case "royalBlue":
+                this.Car2Color = {
+                    left: '../Img/royalBlue - left.png',
+                    right: '../Img/royalBlue -right.png',
+                    down: '../Img/royalBlue - down.png',
+                    up: '../Img/royalBlue-Up.png',
+                }
+                break;
 
             default:
                 break;
         }
+
+
 
 
     },
