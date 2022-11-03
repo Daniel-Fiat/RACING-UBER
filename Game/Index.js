@@ -1,5 +1,5 @@
 onload = () => {
-   //(map,player1color,player2color,playerkey,playerkey)
+    //(map,player1color,player2color,playerkey,playerkey)
     const startGame = document.querySelector('.startGame')
     const GameScreen = document.querySelector('.GameScreen')
     const introPage = document.querySelector('.introPage')
