@@ -1,8 +1,8 @@
 onload = () => {
     //(map,player1color,player2color,playerkey,playerkey)
     const startGame = document.querySelector('.startGame')
-    const GameScreen = document.querySelector('.GameScreen')
     const introPage = document.querySelector('.introPage')
+    const GameScreen = document.querySelector('.GameScreen')
     const blue1 = document.querySelector('#carBlue1')
     const red1 = document.querySelector('#carRed1')
     const white1 = document.querySelector('#carWhite1')
