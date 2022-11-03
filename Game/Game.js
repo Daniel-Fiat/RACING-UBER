@@ -348,11 +348,10 @@ const Game = {
     },
     screenPoints(){
         this.ctx.font = "50px serif";
-        this.ctx.fillText("Player 1 ", 1150,500)
-        this.ctx.fillText(this.player1.PlayerTotalPoints, 1150,600)
-        this.ctx.font = "50px serif";
-        this.ctx.fillText("Player 2 ", 1150,150)
-        this.ctx.fillText(this.player2.PlayerTotalPoints, 1150,250)
+        this.ctx.fillText("Player 1 ", 1150,150)
+        this.ctx.fillText(this.player1.PlayerTotalPoints, 1150,250)
+        this.ctx.fillText("Player 2 ", 1150,500)
+        this.ctx.fillText(this.player2.PlayerTotalPoints, 1150,600)
         this.ctx.fillText(Number.parseInt(this.timer), 1250,400)
         
     }
