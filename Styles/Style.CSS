@@ -41,16 +41,15 @@ body {
     margin-left: 450px;
     max-width: 350px;
     color: #000;
-
 }
 
 label {
     display: block;
-    margin: 0.5rem 0;
+    margin-top: 0;
 }
 
 input[type=text] {
-    width: 70%;
+    width: 200px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -103,35 +102,46 @@ input[type=radio] {
 }
 
 .instructions {
-    margin: 0 20px 0 20px;
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
     color: #000;
-    margin-bottom: 60px;
+    margin-bottom: 300px;
 }
 
 .instructions img {
-    width: 200px;
+    width: 150px;
 
 }
 
 .rules {
-    margin: 0 20px 0 20px;
-    text-align: center;
-    border-radius: 5px;
+    margin: 30px 0px 0 30px;
+    border-radius: 2px;
     background-color: #f2f2f2;
     padding: 20px;
     color: #000;
-    margin-bottom: 60px;
+    margin-bottom: 300px;
+    text-align: center;
 }
 
 .rules h2 {
     text-align: center;
 }
 
+.rules p {
+    font-size: small;
+}
+
 .GameScreen {
     display: flex;
     justify-content: center;
 
+}
+
+.canvasPanel {
+    display: none;
+}
+
+.canvasPanel img {
+    height: 30px;
 }
