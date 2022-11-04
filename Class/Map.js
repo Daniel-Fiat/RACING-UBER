@@ -138,7 +138,7 @@ class Map {
                 {
                 start:new Passengers(this.ctx,this.width,this.height,990,600,30,30),
                 finish:new Destiny(this.ctx,this.width,this.height,35,480,100,100),
-                points:500
+                points:50
                 },
                
                
