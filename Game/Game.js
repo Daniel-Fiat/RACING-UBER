@@ -394,20 +394,20 @@ const Game = {
             if (this.player1.PlayerTotalPoints > this.player2.PlayerTotalPoints) {
     this.Win = new Image()
                 this.Win.src = "../Img/gameOver-player1won.webp"
-                this.ctx.drawImage(this.Win, 350, 50, 600, 600)
+                this.ctx.drawImage(this.Win, 450, 50, 500, 600)
                 document.addEventListener("click", e => location.reload())
             }
             if (this.player1.PlayerTotalPoints < this.player2.PlayerTotalPoints) {
             this.Win = new Image()
                 this.Win.src = "../Img/gameOver-player2won.webp"
-                this.ctx.drawImage(this.Win, 350, 50, 600, 600)
+                this.ctx.drawImage(this.Win, 450, 50, 500, 600)
                 document.addEventListener("click", e => location.reload())
             }
             if (this.player1.PlayerTotalPoints === this.player2.PlayerTotalPoints) {
               
                 this.Win = new Image()
                 this.Win.src = "../Img/keep-calm-it-s-a-tie.png"
-                this.ctx.drawImage(this.Win, 350, 50, 600, 600)
+                this.ctx.drawImage(this.Win, 450, 50, 500, 600)
                 document.addEventListener("click", e => location.reload())
             }
         }
