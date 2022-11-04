@@ -66,8 +66,8 @@ const Game = {
 
         this.setColorCar()
         this.background = new background(this.ctx, this.width, this.height)
-        this.player1 = new Player(this.ctx, this.width, this.height, this.Car1Color, this.Player1SetKey, this.startPos1, "../Img/Puntero-rojo.png")
-        this.player2 = new Player(this.ctx, this.width, this.height, this.Car2Color, this.Player2SetKey, this.startPos2, "../Img/Puntero-azul.png")
+        this.player1 = new Player(this.ctx, this.width, this.height, this.Car1Color, this.Player1SetKey, this.startPos1, "./Img/Puntero-rojo.png")
+        this.player2 = new Player(this.ctx, this.width, this.height, this.Car2Color, this.Player2SetKey, this.startPos2, "./Img/Puntero-azul.png")
         this.map = new Map(this.ctx, this.width, this.height, this.map)
         
     },
@@ -393,20 +393,20 @@ const Game = {
             this.clearAll()
             if (this.player1.PlayerTotalPoints > this.player2.PlayerTotalPoints) {
     this.Win = new Image()
-                this.Win.src = "../Img/gameOver-player1won.webp"
+                this.Win.src = "./Img/gameOver-player1won.webp"
                 this.ctx.drawImage(this.Win, 450, 50, 500, 600)
                 document.addEventListener("click", e => location.reload())
             }
             if (this.player1.PlayerTotalPoints < this.player2.PlayerTotalPoints) {
             this.Win = new Image()
-                this.Win.src = "../Img/gameOver-player2won.webp"
+                this.Win.src = "./Img/gameOver-player2won.webp"
                 this.ctx.drawImage(this.Win, 450, 50, 500, 600)
                 document.addEventListener("click", e => location.reload())
             }
             if (this.player1.PlayerTotalPoints === this.player2.PlayerTotalPoints) {
               
                 this.Win = new Image()
-                this.Win.src = "../Img/keep-calm-it-s-a-tie.png"
+                this.Win.src = "./Img/keep-calm-it-s-a-tie.png"
                 this.ctx.drawImage(this.Win, 450, 50, 500, 600)
                 document.addEventListener("click", e => location.reload())
             }
