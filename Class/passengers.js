@@ -16,12 +16,6 @@ class Passengers {
   }
 
   draw() {
-    this.ctx.drawImage(
-      this.passengerIMG,
-      this.posX,
-      this.posY,
-      this.width,
-      this.height
-    );
+    this.ctx.drawImage(this.passengerIMG,this.posX,this.posY,this.width,this.height );
   }
 }
