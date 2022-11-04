@@ -5,7 +5,7 @@ class background {
         this.height= height
 
         this.backgroundImg= new Image()
-        this.backgroundImg.src= "../Img/Mapa completo.png"
+        this.backgroundImg.src= "./Img/Mapa completo.png"
          
     }
     draw(){
