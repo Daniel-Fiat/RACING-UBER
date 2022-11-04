@@ -12,7 +12,7 @@ class Passengers {
     this.posXMax = this.posX + this.width;
 
     this.passengerIMG = new Image();
-    this.passengerIMG.src = "../Img/passengers.png";
+    this.passengerIMG.src = "./Img/passengers.png";
   }
 
   draw() {
