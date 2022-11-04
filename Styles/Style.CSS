@@ -107,14 +107,20 @@ input[type=radio] {
     background-repeat: no-repeat;
     background-size: 300px;
     height: 400px;
+    width: 330px;
     margin: 2px 0 230px;
     padding: 20px;
     color: #000;
 }
 
 .instructions img {
-    width: 150px;
+    width: 130px;
+    margin-top: 10px;
 
+}
+
+.instructions h2 {
+    margin-top: 35px;
 }
 
 .rules {
@@ -122,10 +128,14 @@ input[type=radio] {
     background-position: bottom 30px right 50px;
     background-repeat: no-repeat;
     background-size: 300px;
-    height: 400px;
+    height: 472px;
+    width: 400px;
     margin: 2px 0 230px;
-    padding: 20px;
+    padding: 0px;
     color: #000;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .rules h2 {
@@ -135,6 +145,8 @@ input[type=radio] {
 .rules p {
     font-size: smaller;
     text-align: center;
+    padding: 0px 80px;
+    margin-bottom: 140px;
 }
 
 .GameScreen {
