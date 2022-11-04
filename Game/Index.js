@@ -19,7 +19,6 @@ onload = () => {
     let player2Color = "blue"
 
     startGame.addEventListener('click', () => {
-
         if (blue1.checked)player1Color=blue1.value
         if (red1.checked)player1Color=red1.value
         if (white1.checked)player1Color=white1.value
@@ -45,6 +44,7 @@ onload = () => {
 
 
         Game.init(map, player1Color, player2Color, Player1SetKey, Player2SetKey)
+
 
     })
 
