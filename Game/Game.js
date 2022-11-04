@@ -79,12 +79,11 @@ const Game = {
         this.map.tunelUpper.forEach(element => element.start.draw())
         this.map.tunelRigth.forEach(element => element.start.draw())
         this.map.tunelsLeft.forEach(element => element.start.draw())
-        
         this.map.blockMap.forEach(block => block.draw())
-        this.screenPoints()
-        
         
         this.background.draw()
+        
+        this.screenPoints()       
         this.map.routes.forEach(element => element.start.draw())
         this.player2.draw()
         this.player1.draw()
