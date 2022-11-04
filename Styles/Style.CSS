@@ -31,7 +31,7 @@ body {
     padding-right: 50px;
     padding-bottom: 20px;
     text-align: center;
-    font-size: 60px;
+    font-size: 35px;
     font-family: 'Abril Fatface', cursive;
 }
 
@@ -135,7 +135,7 @@ input[type=radio] {
     background-position: bottom 30px right 50px;
     background-repeat: no-repeat;
     background-size: 300px;
-    height: 472px;
+    height: 475px;
     width: 400px;
     margin: 2px 0 230px;
     padding: 0px;

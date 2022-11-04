@@ -29,8 +29,8 @@ const Game = {
         this.canvas = document.querySelector("#canvas")
         this.ctx = this.canvas.getContext("2d")
 
-        this.width = window.innerWidth
-        this.height = window.innerHeight
+        this.width = 1366
+        this.height = 770
 
         this.canvas.width = this.width
         this.canvas.height = this.height
@@ -71,9 +71,9 @@ const Game = {
         this.map = new Map(this.ctx, this.width, this.height, this.map)
         
     },
-
+    
     drawAll() {
-
+        
         this.ctx.fillStyle = "rgba(0, 0, 0, 0)"
         this.map.tunelsLower.forEach(element => element.start.draw())
         this.map.tunelUpper.forEach(element => element.start.draw())
@@ -81,10 +81,10 @@ const Game = {
         this.map.tunelsLeft.forEach(element => element.start.draw())
         
         this.map.blockMap.forEach(block => block.draw())
-        this.background.draw()
         this.screenPoints()
-      
-       
+        
+        
+        this.background.draw()
         this.map.routes.forEach(element => element.start.draw())
         this.player2.draw()
         this.player1.draw()
