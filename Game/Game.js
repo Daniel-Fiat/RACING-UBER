@@ -25,7 +25,7 @@ const Game = {
     timer: 60,
     timerToPrint: undefined,
 
-    init(map, Player1Color, Player2Color, Player1SetKey, Player2SetKey) { //falta meter el input del nombre de los jugadores???
+    init(map, Player1Color, Player2Color, Player1SetKey, Player2SetKey) { 
         this.canvas = document.querySelector("#canvas")
         this.ctx = this.canvas.getContext("2d")
 
@@ -244,7 +244,8 @@ const Game = {
         })
         this.map.routes.forEach((route, index) => {
             if (!this.player2.mission) {
-                if (this.player2.posX < route.start.posXMax &&
+                if (
+                    this.player2.posX < route.start.posXMax &&
                     this.player2.posY < route.start.posYMax &&
                     this.player2.posY > route.start.posY - this.player2.height &&
                     this.player2.posX > route.start.posX - this.player2.width) {
