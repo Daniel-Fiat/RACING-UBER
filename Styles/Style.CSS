@@ -47,6 +47,8 @@ body {
     text-decoration: underline;
     height: 20px;
     padding-bottom: 10px;
+    font-size: 30px;
+    padding: 50px;
 }
 
 
@@ -56,6 +58,11 @@ body {
 
 input[type=radio] {
     display: inline;
+}
+
+.playerColors label {
+    font-weight: bold;
+    font-size: 30px;
 }
 
 
