@@ -8,164 +8,150 @@
 .nonDisplay {
     display: none;
 }
-
-body {
-    margin: 0;
+.background{
     background: url("../Img/new3background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    text-align: center;
+}
+.background2{
+    background:rgba(90, 244, 249, 0.612);
 }
 
-.main img {
-    width: 50px;
+body {
+    margin: 0;
+    text-align: center;
+ 
+}
+.logo {
     display: inline;
     align-items: center;
+
 }
 
-.main h1 {
-    color: #000;
-    margin: 0 auto;
-    padding-top: 53px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 20px;
-    text-align: center;
-    font-size: 35px;
-    font-family: 'Abril Fatface', cursive;
+.logo img {
+    width: 7%;
+    border-radius: 20px;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+.instructions{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.instructions img{
+    background-color: rgba(253, 253, 253, 0.75);
+    border-radius: 15px;
+    width: 95%;
+    border:5px solid rgba(255, 255, 255, 9);
+    transition: background-color 0.5s;
+}
+.instructions img:hover{
+    background-color: rgb(253, 253, 253);
+
+}
+
+
+.playerInfo {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.button {
+    
+    padding: 25px 100px;
+    background-color: rgba(94, 46, 238, 0.95);
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+   font-size: 30px;
+    border-radius: 60px;
+    transition: background-color 1s ;
+    margin-top: 15px;
+    
+}
+
+.button:hover{
+    background-color: rgb(44, 0, 174);
+   
 }
 
 .playerColors {
-    height: 100px;
+
+    border: 2px solid rgba(255, 255, 255, 0.534);
+    background-color: rgba(0, 0, 0, 0.85);
+    font-size: 40px;
+    color: white;
+    padding: 10px 70px;
+    border-radius: 40px;
+    margin: 50px;
+}
+.playerColors h3{
     display: block;
-    align-items: center;
-    text-decoration-color: bold;
-    font-family: 'Abril Fatface', cursive;
-}
-
-.playerColors h2 {
-    text-decoration: underline;
-    height: 20px;
-    padding-bottom: 10px;
-    font-size: 30px;
-    padding: 50px;
-}
-
-
-.player1Colors {
-    margin-bottom: 35px;
-}
-
-input[type=radio] {
-    display: inline;
-}
-
-.playerColors label {
-    font-weight: bold;
-    font-size: 30px;
-}
-
-
-.startGame {
-    border: 0;
-    line-height: 2.5;
-    padding: 0 20px;
-    font-size: 1rem;
-    font-family: 'Abril Fatface', cursive;
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 1px #000;
-    border-radius: 10px;
-    background-color: rgb(0, 161, 220);
-    background-image: linear-gradient(to top left, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 30%, rgba(0, 0, 0, 0));
-    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6), inset -2px -2px 3px rgba(0, 0, 0, .6);
-
+    margin-bottom: 15px;
 
 }
-
-.startGame:hover {
-    background-color: rgb(0, 200, 255);
+.playerColors label{
+    margin: 0 10px;
 }
 
-.startGame:active {
-    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6), inset 2px 2px 3px rgba(0, 0, 0, .6);
+.radio-player img {
+    width: 45px;
+    margin: 10px;
 }
 
-.startButton {
-    display: flex;
-    justify-content: center;
-
-}
-
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 20px;
-    margin-top: 400px;
-    color: #fff;
-    font-family: 'Abril Fatface', cursive;
-
-}
-
-.instructions {
-    background: url("../Img/pngwing.com.png");
-    background-position: bottom 30px right 50px;
-    background-repeat: no-repeat;
-    background-size: 300px;
-    height: 400px;
-    width: 330px;
-    margin: 2px 0 230px;
-    padding: 20px;
-    color: #000;
-}
-
-.instructions img {
-    width: 130px;
-    margin-top: 10px;
-
-}
-
-.instructions h2 {
-    margin-top: 35px;
-}
-
-.rules {
-    background: url("../Img/pngwing.com.png");
-    background-position: bottom 30px right 50px;
-    background-repeat: no-repeat;
-    background-size: 300px;
-    height: 475px;
-    width: 400px;
-    margin: 2px 0 230px;
-    padding: 0px;
-    color: #000;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.rules h2 {
-    text-align: center;
-}
-
-.rules p {
-    font-size: smaller;
-    text-align: center;
-    padding: 0px 80px;
-    margin-bottom: 140px;
-}
-
-.GameScreen {
-    display: flex;
-    justify-content: center;
-
-}
-
-.canvasPanel {
+.radio__input {
     display: none;
 }
 
-.canvasPanel img {
-    height: 30px;
+.radio__label {
+    cursor: pointer;
+    opacity: 0.4;
+    transition: opacity 0.5s;
+}
+
+.radio__input:checked+.radio__label {
+    opacity: 1;
+    
+}
+.container{
+    display: flex;
+}
+.rules{
+    width: 20%;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+
+}
+.rules div{
+    background-color: rgba(253, 253, 253, 0.75);
+    border: 5px solid rgba(255, 255, 255, 75);
+    padding: 5px 0;
+    border-radius: 15px;
+    line-height: 1.5;
+    transition: background-color 0.5s;
+}
+.rules div:hover{
+    background-color: rgb(253, 253, 253);
+}
+.rules h2{
+
+    text-decoration: underline;
+    font-size: 1.5em;
+}
+.start{
+    display: flex;
+    justify-content: center;
+}
+.game{
+   margin-top: 50px;
+
 }

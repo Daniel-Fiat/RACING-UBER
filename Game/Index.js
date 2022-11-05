@@ -1,8 +1,10 @@
 onload = () => {
     //(map,player1color,player2color,playerkey,playerkey)
-    const startGame = document.querySelector('.startGame')
+    const startGame = document.querySelector('#startGame')
     const introPage = document.querySelector('.introPage')
     const GameScreen = document.querySelector('.GameScreen')
+    const canvas = document.querySelector('#canvas')
+    const body = document.querySelector('#body')
     const blue1 = document.querySelector('#carBlue1')
     const red1 = document.querySelector('#carRed1')
     const white1 = document.querySelector('#carWhite1')
@@ -17,6 +19,7 @@ onload = () => {
     const royalBlue2 = document.querySelector('#carRoyalBlue2')
     let player1Color ="red"
     let player2Color = "blue"
+
 
     startGame.addEventListener('click', () => {
         if (blue1.checked)player1Color=blue1.value
@@ -37,6 +40,9 @@ onload = () => {
 
         introPage.classList.toggle('nonDisplay')
         canvas.classList.toggle('nonDisplay')
+        body.classList.toggle('background')
+        body.classList.toggle('background2')
+
 
         const map = 1
         const Player1SetKey = 1
